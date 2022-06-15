@@ -1,0 +1,13 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="WelcomeScreen.OpenProject">
+      <i c="1" l="1655294043162" />
+    </e>
+    <e n="com.intellij.openapi.ui.DialogWrapper$4">
+      <i c="1" l="1655294190678" />
+    </e>
+    <e n="com.intellij.openapi.ui.impl.DialogWrapperPeerImpl$AnCancelAction">
+      <i c="1" l="1655294188572" />
+    </e>
+  </component>
+</application>

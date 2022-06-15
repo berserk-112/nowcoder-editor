@@ -1,0 +1,54 @@
+<application>
+  <component name="DynamicPluginEnabler">
+    <trackers>
+      <map>
+        <entry key="2AShYolLJbWUY7HWPFnrmaRqGwE">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+      </map>
+    </trackers>
+  </component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontScale" value="1.25" />
+    <option name="fontSize" value="17.0" />
+  </component>
+  <component name="PropertyService"><![CDATA[{
+  "keyToString": {
+    "CWM_LOGGING_VERSION": "1",
+    "NextRunPlatformUpdateBuild": "IU-221.5787.30/2022.1.2",
+    "NextRunPlatformUpdateVersion": "2022.1.2",
+    "RunOnceActivity.se.text.search": "true",
+    "bundled.plugins.list.saved.version": "IU-221.5080.210",
+    "eclipse.projects.detected": "",
+    "fileTypeChangedCounter": "1",
+    "gotit.previous.run": "IU-221.5080.210",
+    "ide.memory.adjusted": "true",
+    "ide.updates.whats.new.shown.for": "221",
+    "input.method.disabler.muted": "true",
+    "installed.kotlin.plugin.version": "221-1.6.20-release-285-IJ5080.210",
+    "last_opened_file_path": "/home/sun/IDEAlu/Nowcoder",
+    "registry.to.advanced.settings.migration.build": "IU-221.5080.210",
+    "tasks.pass.word.conversion.enforced": "true",
+    "ts.lib.d.ts.version": "4.5.4"
+  },
+  "keyToStringList": {
+    "file.chooser.recent.files": [
+      "/home/sun/IDEAlu/Nowcoder"
+    ],
+    "fileTypeDetectors": [
+      "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
+      "com.intellij.profiler.ultimate.hprof.impl.HprofFileTypeDetector",
+      "com.intellij.docker.dockerFile.DockerFileTypeDetector",
+      "com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector",
+      "com.intellij.database.vfs.DbStorageFileType$Detector",
+      "com.jetbrains.nodejs.util.NodeFileTypeDetector$JavaScriptFileTypeDetector",
+      "com.jetbrains.nodejs.util.NodeFileTypeDetector$TypeScriptFileTypeDetector",
+      "com.android.tools.idea.sqlite.fileType.SqliteFileTypeDetector",
+      "com.android.tools.idea.profilers.capture.MemoryCaptureFileType$Detector",
+      "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
+    ]
+  }
+}]]></component>
+</application>
