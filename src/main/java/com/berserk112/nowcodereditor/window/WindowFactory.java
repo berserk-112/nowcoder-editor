@@ -47,17 +47,17 @@ public class WindowFactory implements ToolWindowFactory {
     }
 
     public static void updateTitle(@NotNull Project project, String userName) {
-        ToolWindow leetcodeToolWindows = ToolWindowManager.getInstance(project).getToolWindow(ID);
+        ToolWindow nowcoderToolWindows = ToolWindowManager.getInstance(project).getToolWindow(ID);
         if (StringUtils.isNotBlank(userName)) {
-            leetcodeToolWindows.setTitle("[" + userName + "]");
+            nowcoderToolWindows.setTitle("[" + userName + "]");
         } else {
-            leetcodeToolWindows.setTitle("");
+            nowcoderToolWindows.setTitle("");
         }
     }
 
     public static void activateToolWindow(@NotNull Project project) {
-        ToolWindow leetcodeToolWindows = ToolWindowManager.getInstance(project).getToolWindow(ID);
-        leetcodeToolWindows.activate(null);
+        ToolWindow nowcoderToolWindows = ToolWindowManager.getInstance(project).getToolWindow(ID);
+        nowcoderToolWindows.activate(null);
     }
 
 }

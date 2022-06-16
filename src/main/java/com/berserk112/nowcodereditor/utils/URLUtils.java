@@ -25,7 +25,10 @@ public class URLUtils {
     private static String nowcoderTopic = "/getQuestionTopic";
     //https://www.nowcoder.com/api/questiontraining/coding/knowledge-checklist?pid=520&_=1653922171549
 //    https://www.nowcoder.com/api/questiontraining/coding/getTopicQuestion?pageSize=50&topicId=196&page=1&_=1653922187064
-    private static String nowcoderSubmissions = "/submit_cd";
+    private static String nowcoderSubmit = "/submit_cd";
+    private static String nowcoderSubmission = "/problem/coding/submission";
+    private static String nowcoderSubmissionDetail = "/detail";
+    private static String nowcoderSubmissionHistory = "/history";
     private static String nowcoderTags = "/getTopicQuestion"; //牛客没有单独获取tags的接口，每次获取题目时都传送tags
     private static String nowcoderQuestionInfo = "/practice/terminal";
     private static String nowcoderPractice = "/practice";
@@ -71,8 +74,8 @@ public class URLUtils {
         return getNowcoderUrl() + nowcoderCommon;
     }
 
-    public static String getNowcoderSubmissions() {
-        return getNowcoderCommon() + nowcoderSubmissions;
+    public static String getNowcoderSubmit() {
+        return getNowcoderCommon() + nowcoderSubmit;
     }
 
     public static String getNowcoderTags() {
@@ -108,6 +111,18 @@ public class URLUtils {
 
     public static String getNowcoderRuncode() {
         return getNowcoderCommon() + nowcoderRuncode;
+    }
+
+    public static String getNowcoderSubmission() {
+        return getNowcoderUrl() + nowcoderSubmission;
+    }
+
+    public static String getNowcoderSubmissionDetail() {
+        return getNowcoderSubmission() + nowcoderSubmissionDetail;
+    }
+
+    public static String getNowcoderSubmissionHistory() {
+        return getNowcoderSubmission() + nowcoderSubmissionHistory;
     }
 
     public static String getNowcoderLogout() {

@@ -33,7 +33,7 @@ public class SettingConfigurable implements SearchableConfigurable {
     @Nullable
     @Override
     public String getHelpTopic() {
-        return "leetcode.helpTopic";
+        return "nowcoder.helpTopic";
     }
 
     @Nullable

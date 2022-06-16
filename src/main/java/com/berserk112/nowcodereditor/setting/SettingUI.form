@@ -130,15 +130,6 @@
               <text value="TempFilePath:"/>
             </properties>
           </component>
-          <component id="313ac" class="javax.swing.JLabel">
-            <constraints>
-              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <enabled value="true"/>
-              <text value="Password:"/>
-            </properties>
-          </component>
           <component id="bf817" class="javax.swing.JComboBox" binding="webComboBox">
             <constraints>
               <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false">
@@ -159,15 +150,7 @@
           </component>
           <component id="5c754" class="com.intellij.ui.components.JBTextField" binding="userNameField">
             <constraints>
-              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
-                <minimum-size width="150" height="-1"/>
-              </grid>
-            </constraints>
-            <properties/>
-          </component>
-          <component id="4e54a" class="com.intellij.ui.components.JBPasswordField" binding="passwordField">
-            <constraints>
-              <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
+              <grid row="1" column="1" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false">
                 <minimum-size width="150" height="-1"/>
               </grid>
             </constraints>

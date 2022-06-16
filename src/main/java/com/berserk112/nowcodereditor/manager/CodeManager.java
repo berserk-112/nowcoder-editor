@@ -1,22 +1,17 @@
 package com.berserk112.nowcodereditor.manager;
 
-import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.berserk112.nowcodereditor.listener.QuestionStatusListener;
 import com.berserk112.nowcodereditor.model.*;
 import com.berserk112.nowcodereditor.setting.PersistentConfig;
 import com.berserk112.nowcodereditor.utils.*;
-import com.google.common.base.Joiner;
 import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.progress.ProgressManager;
 import com.intellij.openapi.progress.Task;
 import com.intellij.openapi.project.Project;
 import org.apache.commons.lang.StringUtils;
 import org.apache.http.client.utils.URIBuilder;
-import org.apache.http.client.utils.URLEncodedUtils;
 import org.jetbrains.annotations.NotNull;
-import org.jsoup.Jsoup;
-import org.jsoup.nodes.Document;
 
 import java.io.File;
 import java.math.BigDecimal;
@@ -101,7 +96,7 @@ public class CodeManager {
         }
 
         try {
-            HttpRequest httpRequest = HttpRequest.post(URLUtils.getNowcoderSubmissions(), "application/x-www-form-urlencoded; charset=UTF-8");
+            HttpRequest httpRequest = HttpRequest.post(URLUtils.getNowcoderSubmit(), "application/x-www-form-urlencoded; charset=UTF-8");
             httpRequest.addParam("questionId", question.getQuestionId());
             httpRequest.addParam("content", URLEncoder.encode(code, StandardCharsets.UTF_8.toString()));
             httpRequest.addParam("language", String.valueOf(codeTypeEnum.getLangId()));
@@ -290,8 +285,8 @@ public class CodeManager {
 
                                 String input = jsonObject.getString("userInput");
                                 String output = jsonObject.getString("userOutput");
-                                String outputs = jsonObject.getString("expectedOutput");
-                                MessageUtils.getInstance(project).showInfoMsg("info", PropertiesUtils.getInfo("submit.failed", input, output, outputs));
+                                String expectedOutput = jsonObject.getString("expectedOutput");
+                                MessageUtils.getInstance(project).showInfoMsg("info", PropertiesUtils.getInfo("submit.failed", input, output, expectedOutput));
 
                                 if (!"ac".equals(question.getStatus())) {
                                     question.setStatus("notac");
@@ -365,7 +360,7 @@ public class CodeManager {
                         body = response.getBody();
                         JSONObject jsonObject = JSONObject.parseObject(body);
                         if ("编译错误".equals(jsonObject.getString("judgeReplyDesc"))) {
-                            MessageUtils.getInstance(project).showInfoMsg("info", PropertiesUtils.getInfo("test.success", "编译错误"));
+                            MessageUtils.getInstance(project).showInfoMsg("info", PropertiesUtils.getInfo("test.error", "编译错误"));
                             return;
                         }
                         if (!"等待判题".equals(jsonObject.getString("judgeReplyDesc"))) {

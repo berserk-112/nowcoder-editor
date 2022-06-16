@@ -9,7 +9,7 @@ import javax.swing.*;
  */
 public interface NowCoderEditorIcons {
     
-    Icon NOWCODER_TOOL_WINDOW = IconLoader.getIcon("/icons/LeetCode.svg");
+    Icon NOWCODER_TOOL_WINDOW = IconLoader.getIcon("/icons/nowcoder.svg");
     Icon EMPEROR_NEW_CLOTHES = IconLoader.getIcon("/icons/emperor_new_clothes.svg");
 
     Icon CLEAN = IconLoader.getIcon("/icons/clean.svg");

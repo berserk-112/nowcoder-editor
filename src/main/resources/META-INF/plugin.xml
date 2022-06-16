@@ -8,15 +8,16 @@
     <name>Nowcoder Editor</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor email="xiaodong111245@gmail.com" url="https://www.github.com/berserk-112">berserk-112</vendor>
+    <vendor email="xiaodong111245@gmail.com" url="https://www.github.com/berserk-112/nowcoder-editor">berserk-112</vendor>
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-    <p>ssssidjfidsjalkjkljkljcxklzjvkmfklsmkajfkew</p><br>
-    <p>ssdjfkladsj</p>
-  ]]></description>
+        <div>
+            <p>本地IDE运行牛客网题目插件，根据shuzijun的<a href="https://github.com/shuzijun/leetcode-editor">LeetCode插件</a>修改得来</p>
+        </div>
+]]></description>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
@@ -123,12 +124,16 @@
         <action id="nowcoder.ClearOneAction" class="com.berserk112.nowcodereditor.actions.tree.ClearOneAction"
                 text="Clear cache" description="Clear cache" icon="NowCoderEditorIcons.CLEAR">
         </action>
-
-<!--
-        <action id="nowcoder.PickAction" class="com.berserk112.nowcodereditor.actions.toolbar.PickAction"
-                text="Pick one" description="Pick one" icon="NowCoderEditorIcons.RANDOM">
+        <action id="nowcoder.ClearAllAction" class="com.berserk112.nowcodereditor.actions.toolbar.ClearAllAction"
+                text="Clear cache" description="Clear cache" icon="NowCoderEditorIcons.CLEAR">
         </action>
--->
+
+
+        <!--
+                <action id="nowcoder.PickAction" class="com.berserk112.nowcodereditor.actions.toolbar.PickAction"
+                        text="Pick one" description="Pick one" icon="NowCoderEditorIcons.RANDOM">
+                </action>
+        -->
 
         <group id="nowcoder.NavigatorActionsToolbar">
             <reference id="nowcoder.LoginAction"/>
@@ -140,8 +145,8 @@
 <!--            <reference id="nowcoder.ProgressAction"/>-->
             <separator/>
             <reference id="nowcoder.ConfigAction"/>
-<!--
             <reference id="nowcoder.ClearAllAction"/>
+<!--
             <reference id="nowcoder.HelpAction"/>
             <action id="nowcoder.DonateAction" class="com.berserk112.nowcodereditor.actions.toolbar.DonateAction"
                     text="Donate" description="Donate" icon="NowCoderEditorIcons.DONATE">
@@ -151,8 +156,10 @@
 
         <group id="nowcoder.NavigatorActionsMenu">
             <reference id="nowcoder.OpenAction"/>
+<!--
             <reference id="nowcoder.OpenContentAction"/>
             <reference id="nowcoder.OpenSolutionAction"/>
+-->
             <reference id="nowcoder.OpenInWebAction"/>
             <separator/>
             <reference id="nowcoder.SubmitAction"/>
@@ -166,6 +173,7 @@
                    popup="true" text="Favorite" description="Favorite" icon="NowCoderEditorIcons.FAVORITE">
             </group>
 -->
+<!--
             <group id="nowcoder.note" popup="true" text="note" description="note" icon="NowCoderEditorIcons.NOTE">
                 <action id="nowcoder.ShowNote"
                         class="com.berserk112.nowcodereditor.actions.tree.ShowNoteAction"
@@ -179,6 +187,7 @@
                 </action>
             </group>
             <separator/>
+-->
             <group id="nowcoder.timer" popup="true" text="Timer" description="timer" icon="NowCoderEditorIcons.TIME">
                 <action id="nowcoder.StartTimeAction"
                         class="com.berserk112.nowcodereditor.actions.tree.StartTimeAction"
@@ -235,6 +244,7 @@
                     text="Submissions" description="Submissions(editor)" icon="NowCoderEditorIcons.HISTORY">
             </action>
             <separator/>
+<!--
             <action id="nowcoder.editor.OpenContentAction"
                     class="com.berserk112.nowcodereditor.actions.editor.OpenContentAction"
                     text="open content" description="open content(editor)" icon="NowCoderEditorIcons.DESC">
@@ -242,11 +252,13 @@
             <action id="nowcoder.editor.OpenSolutionAction" class="com.berserk112.nowcodereditor.actions.editor.OpenSolutionAction"
                     text="open solution" description="open solution" icon="NowCoderEditorIcons.SOLUTION">
             </action>
+-->
             <action id="nowcoder.editor.OpenInWebAction"
                     class="com.berserk112.nowcodereditor.actions.editor.OpenInWebAction"
                     text="open in web" description="open in web(editor)" icon="NowCoderEditorIcons.POPUP">
             </action>
             <separator/>
+<!--
             <group id="nowcoder.editor.note" popup="true" text="note" description="note"
                    icon="NowCoderEditorIcons.NOTE">
                 <action id="nowcoder.editor.ShowNote"
@@ -262,6 +274,7 @@
                         text="PushNote" description="Push Note">
                 </action>
             </group>
+-->
             <group id="nowcoder.editor.timer" popup="true" text="Timer" description="timer(editor)" icon="NowCoderEditorIcons.TIME">
                 <action id="nowcoder.editor.StartTimeAction"
                         class="com.berserk112.nowcodereditor.actions.editor.StartTimeAction"

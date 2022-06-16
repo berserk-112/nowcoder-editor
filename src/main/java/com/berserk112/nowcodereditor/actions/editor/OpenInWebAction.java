@@ -13,7 +13,6 @@ public class OpenInWebAction extends AbstractEditAction {
 
     @Override
     public void actionPerformed(AnActionEvent anActionEvent, Config config, Question question) {
-//        BrowserUtil.browse(URLUtils.getLeetcodeProblems() + question.getTitleSlug());
-        BrowserUtil.browse("");
+        BrowserUtil.browse(URLUtils.getNowcoderPractice() + question.getQuestionUUid());
     }
 }

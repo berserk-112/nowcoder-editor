@@ -42,36 +42,9 @@ public class QuestionManager {
                 .addParameter("order", pageInfo.getFilters().getOrder())
                 .addParameter("asc", pageInfo.getFilters().getAcs());
 //        StringBuilder requestSb = new StringBuilder();
-/*
-        requestSb.append(URLUtils.getNowcoderQuestion());
-        requestSb.append("?pageSize=").append(pageInfo.pageSize);
-        if (StringUtils.isNotBlank(pageInfo.getFilters().getTags())) {
-            requestSb.append("&tags=").append(pageInfo.getFilters().getTags());
-        }
-        if (StringUtils.isNotBlank(pageInfo.getFilters().getTopicId())) {
-            requestSb.append("&topicId=").append(pageInfo.getFilters().getTopicId());
-        }
-        if (StringUtils.isNotBlank(pageInfo.getFilters().getDifficulty())) {
-            requestSb.append("&difficulty=").append(pageInfo.getFilters().getDifficulty());
-        }
-        if (StringUtils.isNotBlank(pageInfo.getFilters().getStatus())) {
-            requestSb.append("&judgeStatus=").append(pageInfo.getFilters().getStatus());
-        }
-        if (StringUtils.isNotBlank(pageInfo.getFilters().getOrder())) {
-            requestSb.append("&order=").append(pageInfo.getFilters().getOrder());
-            requestSb.append("&asc=").append(pageInfo.getFilters().getAcs());
-        }
-*/
+
         HttpRequest httpRequest = HttpRequest.get(URLUtils.getNowcoderQuestion() + uriBuilder);
-/*
-        httpRequest.addHeader("Accept", "application/json");
-        try {
-            httprequest.addparam("pagesize", string.valueof(pageinfo.pagesize));
-            httprequest.addparam("topicid", string.valueof(pageinfo.getfilters().gettopicid()));
-        } catch (unsupportedencodingexception e) {
-            throw new runtimeexception(e);
-        }
-*/
+
         HttpResponse response = HttpRequestUtils.executeGet(httpRequest);
         if (HttpRequestUtils.isLogin()) {
             if (response != null && response.getStatusCode() == 200) {
@@ -319,6 +292,7 @@ public class QuestionManager {
                 question.setOutputSample(samples.getString("output"));
                 question.setContent(getContent(jObject, jsonObject, samples));
                 question.setQuestionId(questionInfo.getString("id"));
+                question.setProblemId(questionInfo.getString("problemId"));
 
                 question.setTitle(jsonObject.getString("title"));
                 question.setLevel(questionInfo.getInteger("difficulty"));

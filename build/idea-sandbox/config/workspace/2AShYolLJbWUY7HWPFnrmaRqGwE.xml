@@ -6,6 +6,20 @@
       </GroupState>
     </option>
   </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file:///tmp/nowcoder/editor/cn/反转链表.java">
+          <provider selected="true" editor-type-id="split-provider[text-editor;lcv view]" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTypeUsageLocalSummary">
+    <fileType name="JAVA">
+      <summary usageCount="4" lastUsed="1655356719640" />
+    </fileType>
+  </component>
   <component name="IgnoredFileRootStore">
     <option name="generatedRoots">
       <set>
@@ -14,37 +28,44 @@
     </option>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="128000" />
+    <option name="totallyTimeSpent" value="1980000" />
   </component>
   <component name="ToolWindowManager">
+    <editor active="true" />
     <layout>
       <window_info id="Bookmarks" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
-      <window_info id="Learn" order="0" />
-      <window_info id="Structure" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" weight="0.25" />
+      <window_info id="Learn" order="2" />
+      <window_info id="Structure" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="4" />
-      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
-      <window_info anchor="bottom" id="Problems View" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="4" />
-      <window_info anchor="bottom" id="Endpoints" order="4" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Services" order="4" />
-      <window_info anchor="bottom" id="Profiler" order="4" />
-      <window_info anchor="right" id="nowcoder" order="0" side_tool="true" visible="true" weight="0.32994792" />
-      <window_info anchor="right" id="Database" order="0" />
-      <window_info anchor="right" id="Notifications" order="0" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Problems View" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Endpoints" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Services" order="9" />
+      <window_info anchor="bottom" id="Profiler" order="10" />
+      <window_info anchor="right" id="nowcoder" order="0" sideWeight="0.49945176" side_tool="true" visible="true" weight="0.2502604" />
+      <window_info anchor="right" id="Database" order="1" />
+      <window_info anchor="right" id="Notifications" order="2" sideWeight="0.50054824" weight="0.2502604" />
     </layout>
     <recentWindows>
       <value>nowcoder</value>
+      <value>Notifications</value>
     </recentWindows>
   </component>
   <component name="WindowStateProjectService">
-    <state x="324" y="101" key="SettingsEditor" timestamp="1655294188601">
+    <state x="324" y="101" key="SettingsEditor" timestamp="1655341226558">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="324" y="101" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1655294188601" />
+    <state x="324" y="101" key="SettingsEditor/0.0.1920.1080@0.0.1920.1080" timestamp="1655341226558" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file:///tmp/nowcoder/editor/cn/反转链表.java">
+      <provider selected="true" editor-type-id="split-provider[text-editor;lcv view]" />
+    </entry>
   </component>
 </project>

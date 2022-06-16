@@ -12,6 +12,10 @@ public class Question {
     private String title;
     private String questionId;
     /**
+     * use for submission history
+     */
+    private String problemId;
+    /**
      * 题目所属topicId
      */
     private String tpId;
@@ -238,6 +242,14 @@ public class Question {
             return  "✔";
         }
         return  "   ";
+    }
+
+    public String getProblemId() {
+        return problemId;
+    }
+
+    public void setProblemId(String problemId) {
+        this.problemId = problemId;
     }
 
     @Override
