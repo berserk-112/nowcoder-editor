@@ -1,5 +1,0 @@
-Deprecated method com.intellij.util.ui.UIUtil.createImage(int width, int height, int type) : java.awt.image.BufferedImage is invoked in com.berserk112.nowcodereditor.renderer.CustomTreeCellRenderer.getResourceBufferedImage(String) : BufferedImage
-Deprecated field com.intellij.openapi.editor.colors.EditorColors.SCROLLBAR_THUMB_COLOR : com.intellij.openapi.editor.colors.ColorKey is accessed in com.berserk112.nowcodereditor.editor.LCVPreview.getStyle(boolean) : String
-Deprecated class com.intellij.ui.content.ContentFactory.SERVICE is referenced in com.berserk112.nowcodereditor.window.WindowFactory.createToolWindowContent(Project, ToolWindow) : void
-Deprecated method com.intellij.openapi.util.IconLoader.getIcon(java.lang.String path) : javax.swing.Icon is invoked in icons.NowCoderEditorIcons.<clinit>() : void
-Deprecated method com.intellij.openapi.components.ServiceManager.getService(java.lang.Class serviceClass) : T is invoked in com.berserk112.nowcodereditor.setting.PersistentConfig.getInstance() : PersistentConfig
