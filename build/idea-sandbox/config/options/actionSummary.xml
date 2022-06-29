@@ -1,0 +1,22 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$SelectAll">
+      <i c="1" l="1656328050633" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="1" l="1656328050854" />
+    </e>
+    <e n="EditorPaste">
+      <i c="1" l="1656325282541" />
+    </e>
+    <e n="WelcomeScreen.OpenProject">
+      <i c="2" l="1656074949767" />
+    </e>
+    <e n="com.intellij.openapi.ui.DialogWrapper$4">
+      <i c="4" l="1656328137918" />
+    </e>
+    <e n="nowcoder.ConfigAction">
+      <i c="1" l="1656328042320" />
+    </e>
+  </component>
+</application>

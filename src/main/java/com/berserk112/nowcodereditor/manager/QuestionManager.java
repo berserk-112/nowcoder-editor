@@ -36,7 +36,8 @@ public class QuestionManager {
                 .addParameter("page", String.valueOf(pageInfo.getPageIndex()))
                 .addParameter("tags", pageInfo.getFilters().getTags())
                 .addParameter("title", pageInfo.getFilters().getTitle())
-                .addParameter("topicId", pageInfo.getFilters().getTopicId())
+                .addParameter("topicId", StringUtils.isBlank(pageInfo.getFilters().getTopicId()) ? "196"
+                        : pageInfo.getFilters().getTopicId())
                 .addParameter("difficulty", pageInfo.getFilters().getDifficulty())
                 .addParameter("judgeStatus", pageInfo.getFilters().getStatus())
                 .addParameter("order", pageInfo.getFilters().getOrder())

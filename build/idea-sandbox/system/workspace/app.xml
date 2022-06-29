@@ -1,0 +1,2406 @@
+<application>
+  <component name="JSRemoteModulesRegistry">
+    <modules />
+  </component>
+  <component name="PluginAdvertiserExtensions">{
+  &quot;plugins&quot;: {
+    &quot;*.kts&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.kotlin&quot;,
+      &quot;nullablePluginName&quot;: &quot;Kotlin&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ipr&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.png&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;.eslintrc&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.config&quot;: {
+      &quot;pluginIdString&quot;: &quot;Lombook Plugin&quot;,
+      &quot;nullablePluginName&quot;: &quot;Lombok&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;Pipfile&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.toml.lang&quot;,
+      &quot;nullablePluginName&quot;: &quot;Toml&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.gradle&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.plugins.gradle&quot;,
+      &quot;nullablePluginName&quot;: &quot;Gradle-Java&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.pnm&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;Cargo.lock&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.toml.lang&quot;,
+      &quot;nullablePluginName&quot;: &quot;Toml&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;lombok.config&quot;: {
+      &quot;pluginIdString&quot;: &quot;Lombook Plugin&quot;,
+      &quot;nullablePluginName&quot;: &quot;Lombok&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.styl&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.plugins.stylus&quot;,
+      &quot;nullablePluginName&quot;: &quot;Stylus&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.xpath2&quot;: {
+      &quot;pluginIdString&quot;: &quot;XPathView&quot;,
+      &quot;nullablePluginName&quot;: &quot;XPathView + XSLT&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.rgbe&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.aab&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.sass&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.plugins.sass&quot;,
+      &quot;nullablePluginName&quot;: &quot;Sass&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;.babelrc&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.jsf&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.jsp&quot;,
+      &quot;nullablePluginName&quot;: &quot;Jakarta EE: Server Pages (JSP)&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;spring.handlers&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.properties&quot;,
+      &quot;nullablePluginName&quot;: &quot;Properties&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;bowerrc&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.js2&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.csv&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.database&quot;,
+      &quot;nullablePluginName&quot;: &quot;Database Tools and SQL&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.pb&quot;: {
+      &quot;pluginIdString&quot;: &quot;idea.plugin.protoeditor&quot;,
+      &quot;nullablePluginName&quot;: &quot;Protocol Buffers&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.jspf&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.jsp&quot;,
+      &quot;nullablePluginName&quot;: &quot;Jakarta EE: Server Pages (JSP)&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.egg&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.def&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.kotlin&quot;,
+      &quot;nullablePluginName&quot;: &quot;Kotlin&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.jql&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.tasks&quot;,
+      &quot;nullablePluginName&quot;: &quot;Task Management&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;.npmrc&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.jspx&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.jsp&quot;,
+      &quot;nullablePluginName&quot;: &quot;Jakarta EE: Server Pages (JSP)&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.jar&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.xml&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;yarn.lock&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.dex&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.jsb2&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.cts&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.jsb3&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.apk&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;.npmignore&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;tsconfig.spec.json&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ttf&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ant&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.json&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ijperf&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.jetbrains.performancePlugin&quot;,
+      &quot;nullablePluginName&quot;: &quot;Performance Testing&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.hlp&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ddl&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.database&quot;,
+      &quot;nullablePluginName&quot;: &quot;Database Tools and SQL&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.xhtml&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;Gopkg.lock&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.toml.lang&quot;,
+      &quot;nullablePluginName&quot;: &quot;Toml&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.qute.txt&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.quarkus&quot;,
+      &quot;nullablePluginName&quot;: &quot;Quarkus&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.dockerfile&quot;: {
+      &quot;pluginIdString&quot;: &quot;Docker&quot;,
+      &quot;nullablePluginName&quot;: &quot;Docker&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.css&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.css&quot;,
+      &quot;nullablePluginName&quot;: &quot;CSS&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ndjson&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;logback.groovy&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.intellij.groovy&quot;,
+      &quot;nullablePluginName&quot;: &quot;Groovy&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.pftrace&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.xls&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.trace&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.feature&quot;: {
+      &quot;pluginIdString&quot;: &quot;gherkin&quot;,
+      &quot;nullablePluginName&quot;: &quot;Gherkin&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.iml&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.as&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.gif&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.form&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.uiDesigner&quot;,
+      &quot;nullablePluginName&quot;: &quot;UI Designer&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.sql&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.database&quot;,
+      &quot;nullablePluginName&quot;: &quot;Database Tools and SQL&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ftlh&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.freemarker&quot;,
+      &quot;nullablePluginName&quot;: &quot;FreeMarker&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ane&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.yml&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.plugins.yaml&quot;,
+      &quot;nullablePluginName&quot;: &quot;YAML&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.dcx&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.tsx&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.tsv&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.database&quot;,
+      &quot;nullablePluginName&quot;: &quot;Database Tools and SQL&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.dtd&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.xjsp&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.jsp&quot;,
+      &quot;nullablePluginName&quot;: &quot;Jakarta EE: Server Pages (JSP)&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.bash&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.jetbrains.sh&quot;,
+      &quot;nullablePluginName&quot;: &quot;Shell Script&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.jpg&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.wadl&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.properties&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.properties&quot;,
+      &quot;nullablePluginName&quot;: &quot;Properties&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.lcv&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.berserk-112.nowcoder-editor&quot;,
+      &quot;nullablePluginName&quot;: &quot;Nowcoder Editor&quot;
+    },
+    &quot;*.ftlx&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.freemarker&quot;,
+      &quot;nullablePluginName&quot;: &quot;FreeMarker&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;maven.config&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.idea.maven&quot;,
+      &quot;nullablePluginName&quot;: &quot;Maven&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.perfetto-trace&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.sh&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.jetbrains.sh&quot;,
+      &quot;nullablePluginName&quot;: &quot;Shell Script&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.html&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.webp&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.smali&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.android.tools.idea.smali&quot;,
+      &quot;nullablePluginName&quot;: &quot;Smali Support&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.elt&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.pro&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.pbm&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ids&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.database&quot;,
+      &quot;nullablePluginName&quot;: &quot;Database Tools and SQL&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.jfr&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;.stylelintignore&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.rs&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.xbm&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.wbmp&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;exclude&quot;: {
+      &quot;pluginIdString&quot;: &quot;Git4Idea&quot;,
+      &quot;nullablePluginName&quot;: &quot;Git&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.psd&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.sht&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;spring.schemas&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.properties&quot;,
+      &quot;nullablePluginName&quot;: &quot;Properties&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.tif&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.dependency diagram&quot;: {
+      &quot;pluginIdString&quot;: &quot;spy-js&quot;,
+      &quot;nullablePluginName&quot;: &quot;Spy-js&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.jshintrc&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.har&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.jsonlines&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;jshint.json&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;tsconfig.json&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ico&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ats&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.shtm&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.less&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.plugins.less&quot;,
+      &quot;nullablePluginName&quot;: &quot;Less&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.pam&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;Dockerfile.native&quot;: {
+      &quot;pluginIdString&quot;: &quot;Docker&quot;,
+      &quot;nullablePluginName&quot;: &quot;Docker&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.svg&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;http-client.cookies&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.jetbrains.restClient&quot;,
+      &quot;nullablePluginName&quot;: &quot;HTTP Client&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.txt&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.qute.yml&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.quarkus&quot;,
+      &quot;nullablePluginName&quot;: &quot;Quarkus&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.xpath&quot;: {
+      &quot;pluginIdString&quot;: &quot;XPathView&quot;,
+      &quot;nullablePluginName&quot;: &quot;XPathView + XSLT&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ppm&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ts&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.mjs&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ppt&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.xpm&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.kotlin_metadata&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.kotlin&quot;,
+      &quot;nullablePluginName&quot;: &quot;Kotlin&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.dic&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.swc&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.qute.yaml&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.quarkus&quot;,
+      &quot;nullablePluginName&quot;: &quot;Quarkus&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.groovy&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.intellij.groovy&quot;,
+      &quot;nullablePluginName&quot;: &quot;Groovy&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.qute.json&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.quarkus&quot;,
+      &quot;nullablePluginName&quot;: &quot;Quarkus&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;Dockerfile.fast-jar&quot;: {
+      &quot;pluginIdString&quot;: &quot;Docker&quot;,
+      &quot;nullablePluginName&quot;: &quot;Docker&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.es&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.jsp&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.jsp&quot;,
+      &quot;nullablePluginName&quot;: &quot;Jakarta EE: Server Pages (JSP)&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.rsh&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;.lcv&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.berserk-112.nowcoder-editor&quot;,
+      &quot;nullablePluginName&quot;: &quot;Nowcoder Editor&quot;
+    },
+    &quot;*.js.map&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScriptDebugger&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript Debugger&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;proguard-*.txt&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;.springBeans&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.idea.eclipse&quot;,
+      &quot;nullablePluginName&quot;: &quot;Eclipse Interoperability&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.vm&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.velocity&quot;,
+      &quot;nullablePluginName&quot;: &quot;Velocity&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.aar&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ldjson&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.pom&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.tga&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;tsconfig.test.json&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.zsh&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.jetbrains.sh&quot;,
+      &quot;nullablePluginName&quot;: &quot;Shell Script&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.jsx&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.toml&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.toml.lang&quot;,
+      &quot;nullablePluginName&quot;: &quot;Toml&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;multidex-config.txt&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;Dockerfile.native-distroless&quot;: {
+      &quot;pluginIdString&quot;: &quot;Docker&quot;,
+      &quot;nullablePluginName&quot;: &quot;Docker&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.gant&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.intellij.groovy&quot;,
+      &quot;nullablePluginName&quot;: &quot;Groovy&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ft&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.velocity&quot;,
+      &quot;nullablePluginName&quot;: &quot;Velocity&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.fs&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.java&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.java&quot;,
+      &quot;nullablePluginName&quot;: &quot;Java&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.tagx&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.jsp&quot;,
+      &quot;nullablePluginName&quot;: &quot;Jakarta EE: Server Pages (JSP)&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.shtml&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.doc&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;.stylelintrc&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.js.flow&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.klib&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.patch&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;tsconfig.editor.json&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.odt&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.markdown&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.intellij.plugins.markdown&quot;,
+      &quot;nullablePluginName&quot;: &quot;Markdown&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.gy&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.intellij.groovy&quot;,
+      &quot;nullablePluginName&quot;: &quot;Groovy&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.iws&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.diff&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.xul&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;.project&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.idea.eclipse&quot;,
+      &quot;nullablePluginName&quot;: &quot;Eclipse Interoperability&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;org.codehaus.groovy.runtime.ExtensionModule&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.intellij.groovy&quot;,
+      &quot;nullablePluginName&quot;: &quot;Groovy&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.tagf&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.jsp&quot;,
+      &quot;nullablePluginName&quot;: &quot;Jakarta EE: Server Pages (JSP)&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.zip&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.otf&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ent&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;tsconfig.app.json&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.war&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;.yarnrc&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.pcx&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.pdf&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ignore&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.jhm&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.tld&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.cjs&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.9.png&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.tiff&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.hgignore&quot;: {
+      &quot;pluginIdString&quot;: &quot;hg4idea&quot;,
+      &quot;nullablePluginName&quot;: &quot;Mercurial&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.fxml&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.mod&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.jrxml&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.kjsm&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.kotlin&quot;,
+      &quot;nullablePluginName&quot;: &quot;Kotlin&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.class&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.java&quot;,
+      &quot;nullablePluginName&quot;: &quot;Java&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.gdsl&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.intellij.groovy&quot;,
+      &quot;nullablePluginName&quot;: &quot;Groovy&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.xsd&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.snap&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.jnlp&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.kotlin_module&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.kotlin&quot;,
+      &quot;nullablePluginName&quot;: &quot;Kotlin&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.xsl&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.xslt&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;tsconfig.e2e.json&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;poetry.lock&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.toml.lang&quot;,
+      &quot;nullablePluginName&quot;: &quot;Toml&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.android_data_binding&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.rest&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.jetbrains.restClient&quot;,
+      &quot;nullablePluginName&quot;: &quot;HTTP Client&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;Dockerfile.legacy-jar&quot;: {
+      &quot;pluginIdString&quot;: &quot;Docker&quot;,
+      &quot;nullablePluginName&quot;: &quot;Docker&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.uml&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.diagram&quot;,
+      &quot;nullablePluginName&quot;: &quot;Diagrams&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;.node-version&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;.eslintignore&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.htm&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.proto&quot;: {
+      &quot;pluginIdString&quot;: &quot;idea.plugin.protoeditor&quot;,
+      &quot;nullablePluginName&quot;: &quot;Protocol Buffers&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.rng&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.mdb&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;jest.config&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.rnc&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;.classpath&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.idea.eclipse&quot;,
+      &quot;nullablePluginName&quot;: &quot;Eclipse Interoperability&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.yaml&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.plugins.yaml&quot;,
+      &quot;nullablePluginName&quot;: &quot;YAML&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;.jshintignore&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.mts&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.jsonl&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.jbig2&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.aidl&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.snippet&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.java&quot;,
+      &quot;nullablePluginName&quot;: &quot;Java&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.gitignore&quot;: {
+      &quot;pluginIdString&quot;: &quot;Git4Idea&quot;,
+      &quot;nullablePluginName&quot;: &quot;Git&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.qute.html&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.quarkus&quot;,
+      &quot;nullablePluginName&quot;: &quot;Quarkus&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;.editorconfig&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.editorconfig.editorconfigjetbrains&quot;,
+      &quot;nullablePluginName&quot;: &quot;EditorConfig&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.cql&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.database&quot;,
+      &quot;nullablePluginName&quot;: &quot;Database Tools and SQL&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.scss&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.plugins.sass&quot;,
+      &quot;nullablePluginName&quot;: &quot;Sass&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.js&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.pptx&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.bmp&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.http&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.jetbrains.restClient&quot;,
+      &quot;nullablePluginName&quot;: &quot;HTTP Client&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.kotlin_builtins&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.kotlin&quot;,
+      &quot;nullablePluginName&quot;: &quot;Kotlin&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.tag&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.jsp&quot;,
+      &quot;nullablePluginName&quot;: &quot;Jakarta EE: Server Pages (JSP)&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;proguard.cfg&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;Dockerfile.jlink&quot;: {
+      &quot;pluginIdString&quot;: &quot;Docker&quot;,
+      &quot;nullablePluginName&quot;: &quot;Docker&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.kt&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.kotlin&quot;,
+      &quot;nullablePluginName&quot;: &quot;Kotlin&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.alloc&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.knm&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.kotlin&quot;,
+      &quot;nullablePluginName&quot;: &quot;Kotlin&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.wsdl&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;.gitmodules&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.icns&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.md&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.intellij.plugins.markdown&quot;,
+      &quot;nullablePluginName&quot;: &quot;Markdown&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.jpeg&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.mf&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.java&quot;,
+      &quot;nullablePluginName&quot;: &quot;Java&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.bigtiff&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.li&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.cvperf&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.jetbrains.performancePlugin&quot;,
+      &quot;nullablePluginName&quot;: &quot;Performance Testing&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.regexp&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.json5&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.textproto&quot;: {
+      &quot;pluginIdString&quot;: &quot;idea.plugin.protoeditor&quot;,
+      &quot;nullablePluginName&quot;: &quot;Protocol Buffers&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;Cargo.toml.orig&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.toml.lang&quot;,
+      &quot;nullablePluginName&quot;: &quot;Toml&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;tsconfig.lib.json&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;Dockerfile.jvm&quot;: {
+      &quot;pluginIdString&quot;: &quot;Docker&quot;,
+      &quot;nullablePluginName&quot;: &quot;Docker&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.es6&quot;: {
+      &quot;pluginIdString&quot;: &quot;JavaScript&quot;,
+      &quot;nullablePluginName&quot;: &quot;JavaScript and TypeScript&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.vsd&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.docx&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;.nvmrc&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.vsl&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.velocity&quot;,
+      &quot;nullablePluginName&quot;: &quot;Velocity&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.heapprofd&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.android&quot;,
+      &quot;nullablePluginName&quot;: &quot;Android&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ng&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;Dockerfile&quot;: {
+      &quot;pluginIdString&quot;: &quot;Docker&quot;,
+      &quot;nullablePluginName&quot;: &quot;Docker&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ear&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.pgm&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.platform.images&quot;,
+      &quot;nullablePluginName&quot;: &quot;Images&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.xlsx&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij&quot;,
+      &quot;nullablePluginName&quot;: &quot;IDEA CORE&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.haml&quot;: {
+      &quot;pluginIdString&quot;: &quot;org.jetbrains.plugins.haml&quot;,
+      &quot;nullablePluginName&quot;: &quot;Haml&quot;,
+      &quot;isBundled&quot;: true
+    },
+    &quot;*.ftl&quot;: {
+      &quot;pluginIdString&quot;: &quot;com.intellij.freemarker&quot;,
+      &quot;nullablePluginName&quot;: &quot;FreeMarker&quot;,
+      &quot;isBundled&quot;: true
+    }
+  }
+}</component>
+  <component name="PluginFeatureService"><![CDATA[{
+  "features": {
+    "com.intellij.packaging.artifacts.ArtifactType": {
+      "featureMap": {
+        "exploded-ear": {
+          "displayName": "Java EE Application: Exploded",
+          "pluginData": {
+            "pluginIdString": "com.intellij.javaee",
+            "nullablePluginName": "Jakarta EE Platform",
+            "isBundled": true
+          }
+        },
+        "exploded-war": {
+          "displayName": "Web Application: Exploded",
+          "pluginData": {
+            "pluginIdString": "com.intellij.javaee",
+            "nullablePluginName": "Jakarta EE Platform",
+            "isBundled": true
+          }
+        },
+        "javafx-preloader": {
+          "displayName": "JavaFx preloader",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.plugins.javaFX",
+            "nullablePluginName": "JavaFX",
+            "isBundled": true
+          }
+        },
+        "plain": {
+          "displayName": "Other",
+          "pluginData": {
+            "pluginIdString": "com.intellij.java",
+            "nullablePluginName": "Java",
+            "isBundled": true
+          }
+        },
+        "ear": {
+          "displayName": "Java EE Application: Archive",
+          "pluginData": {
+            "pluginIdString": "com.intellij.javaee",
+            "nullablePluginName": "Jakarta EE Platform",
+            "isBundled": true
+          }
+        },
+        "war": {
+          "displayName": "Web Application: Archive",
+          "pluginData": {
+            "pluginIdString": "com.intellij.javaee",
+            "nullablePluginName": "Jakarta EE Platform",
+            "isBundled": true
+          }
+        },
+        "ejb-jar": {
+          "displayName": "EJB Application: Archive",
+          "pluginData": {
+            "pluginIdString": "com.intellij.javaee",
+            "nullablePluginName": "Jakarta EE Platform",
+            "isBundled": true
+          }
+        },
+        "jar": {
+          "displayName": "JAR",
+          "pluginData": {
+            "pluginIdString": "com.intellij.java",
+            "nullablePluginName": "Java",
+            "isBundled": true
+          }
+        },
+        "javafx": {
+          "displayName": "JavaFx application",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.plugins.javaFX",
+            "nullablePluginName": "JavaFX",
+            "isBundled": true
+          }
+        },
+        "jlink": {
+          "displayName": "Run-time image (JLink)",
+          "pluginData": {
+            "pluginIdString": "com.intellij.java",
+            "nullablePluginName": "Java",
+            "isBundled": true
+          }
+        },
+        "jpackage": {
+          "displayName": "Platform specific package",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.plugins.javaFX",
+            "nullablePluginName": "JavaFX",
+            "isBundled": true
+          }
+        },
+        "exploded-ejb": {
+          "displayName": "EJB Application: Exploded",
+          "pluginData": {
+            "pluginIdString": "com.intellij.javaee",
+            "nullablePluginName": "Jakarta EE Platform",
+            "isBundled": true
+          }
+        }
+      }
+    },
+    "dependencySupport": {
+      "featureMap": {
+        "java:org.thymeleaf:thymeleaf": {
+          "displayName": "Thymeleaf",
+          "pluginData": {
+            "pluginIdString": "com.intellij.thymeleaf",
+            "nullablePluginName": "Thymeleaf",
+            "isBundled": true
+          }
+        },
+        "java:io.grpc:grpc-api": {
+          "displayName": "java:io.grpc:grpc-api",
+          "pluginData": {
+            "pluginIdString": "com.intellij.grpc",
+            "nullablePluginName": "gRPC",
+            "isBundled": true
+          }
+        },
+        "java:org.springframework.boot:spring-boot": {
+          "displayName": "Spring Boot",
+          "pluginData": {
+            "pluginIdString": "com.intellij.spring.boot",
+            "nullablePluginName": "Spring Boot",
+            "isBundled": true
+          }
+        },
+        "java:io.cucumber:cucumber-java8": {
+          "displayName": "Cucumber",
+          "pluginData": {
+            "pluginIdString": "cucumber-java",
+            "nullablePluginName": "Cucumber for Java",
+            "isBundled": true
+          }
+        },
+        "java:org.hibernate.validator:hibernate-validator": {
+          "displayName": "Hibernate Validator",
+          "pluginData": {
+            "pluginIdString": "com.intellij.beanValidation",
+            "nullablePluginName": "Jakarta EE: Bean Validation",
+            "isBundled": true
+          }
+        },
+        "maven-packaging:war": {
+          "displayName": "WAR Maven Packaging",
+          "pluginData": {
+            "pluginIdString": "com.intellij.javaee.web",
+            "nullablePluginName": "Jakarta EE: Web/Servlets",
+            "isBundled": true
+          }
+        },
+        "java:org.eclipse.persistence:javax.persistence": {
+          "displayName": "Eclipse JPA",
+          "pluginData": {
+            "pluginIdString": "com.intellij.javaee.jpa",
+            "nullablePluginName": "Jakarta EE: Persistence (JPA)",
+            "isBundled": true
+          }
+        },
+        "java:org.springframework:spring-messaging": {
+          "displayName": "Spring Messaging",
+          "pluginData": {
+            "pluginIdString": "com.intellij.spring.messaging",
+            "nullablePluginName": "Spring Messaging",
+            "isBundled": true
+          }
+        },
+        "java:io.smallrye.reactive:mutiny": {
+          "displayName": "Mutiny",
+          "pluginData": {
+            "pluginIdString": "com.intellij.reactivestreams",
+            "nullablePluginName": "Reactive Streams",
+            "isBundled": true
+          }
+        },
+        "java:junit:junit": {
+          "displayName": "JUnit",
+          "pluginData": {
+            "pluginIdString": "JUnit",
+            "nullablePluginName": "JUnit",
+            "isBundled": true
+          }
+        },
+        "java:org.jboss.weld:weld-core-impl": {
+          "displayName": "Weld",
+          "pluginData": {
+            "pluginIdString": "com.intellij.cdi",
+            "nullablePluginName": "Jakarta EE: Contexts and Dependency Injection (CDI)",
+            "isBundled": true
+          }
+        },
+        "java:com.google.protobuf:protobuf-java": {
+          "displayName": "java:com.google.protobuf:protobuf-java",
+          "pluginData": {
+            "pluginIdString": "idea.plugin.protoeditor",
+            "nullablePluginName": "Protocol Buffers",
+            "isBundled": true
+          }
+        },
+        "java:io.micronaut:micronaut-core": {
+          "displayName": "Micronaut",
+          "pluginData": {
+            "pluginIdString": "com.intellij.micronaut",
+            "nullablePluginName": "Micronaut",
+            "isBundled": true
+          }
+        },
+        "java:org.testng:testng": {
+          "displayName": "TestNG",
+          "pluginData": {
+            "pluginIdString": "TestNG-J",
+            "nullablePluginName": "TestNG",
+            "isBundled": true
+          }
+        },
+        "java:jakarta.enterprise:jakarta.enterprise.cdi-api": {
+          "displayName": "Jakarta EE CDI",
+          "pluginData": {
+            "pluginIdString": "com.intellij.cdi",
+            "nullablePluginName": "Jakarta EE: Contexts and Dependency Injection (CDI)",
+            "isBundled": true
+          }
+        },
+        "java:io.quarkus:quarkus-core": {
+          "displayName": "Quarkus",
+          "pluginData": {
+            "pluginIdString": "com.intellij.quarkus",
+            "nullablePluginName": "Quarkus",
+            "isBundled": true
+          }
+        },
+        "java:io.reactivex.rxjava3:rxjava": {
+          "displayName": "RXJava",
+          "pluginData": {
+            "pluginIdString": "com.intellij.reactivestreams",
+            "nullablePluginName": "Reactive Streams",
+            "isBundled": true
+          }
+        },
+        "java:org.projectlombok:lombok": {
+          "displayName": "Lombok",
+          "pluginData": {
+            "pluginIdString": "Lombook Plugin",
+            "nullablePluginName": "Lombok",
+            "isBundled": true
+          }
+        },
+        "java:io.reactivex.rxjava2:rxjava": {
+          "displayName": "RXJava",
+          "pluginData": {
+            "pluginIdString": "com.intellij.reactivestreams",
+            "nullablePluginName": "Reactive Streams",
+            "isBundled": true
+          }
+        },
+        "java:org.springframework.integration:spring-integration-core": {
+          "displayName": "Spring Integration",
+          "pluginData": {
+            "pluginIdString": "com.intellij.spring.integration",
+            "nullablePluginName": "Spring Integration Patterns",
+            "isBundled": true
+          }
+        },
+        "java:jakarta.validation:jakarta.validation-api": {
+          "displayName": "Jakarta EE Bean Validation",
+          "pluginData": {
+            "pluginIdString": "com.intellij.beanValidation",
+            "nullablePluginName": "Jakarta EE: Bean Validation",
+            "isBundled": true
+          }
+        },
+        "java:org.springframework:spring-webmvc": {
+          "displayName": "Spring MVC",
+          "pluginData": {
+            "pluginIdString": "com.intellij.spring.mvc",
+            "nullablePluginName": "Spring Web",
+            "isBundled": true
+          }
+        },
+        "java:javax.persistence:javax.persistence-api": {
+          "displayName": "Java EE JPA",
+          "pluginData": {
+            "pluginIdString": "com.intellij.javaee.jpa",
+            "nullablePluginName": "Jakarta EE: Persistence (JPA)",
+            "isBundled": true
+          }
+        },
+        "java:org.springframework:spring-core": {
+          "displayName": "Spring",
+          "pluginData": {
+            "pluginIdString": "com.intellij.spring",
+            "nullablePluginName": "Spring",
+            "isBundled": true
+          }
+        },
+        "java:org.springframework.security:spring-security-core": {
+          "displayName": "Spring Security",
+          "pluginData": {
+            "pluginIdString": "com.intellij.spring.security",
+            "nullablePluginName": "Spring Security",
+            "isBundled": true
+          }
+        },
+        "java:io.cucumber:cucumber-java": {
+          "displayName": "Cucumber",
+          "pluginData": {
+            "pluginIdString": "cucumber-java",
+            "nullablePluginName": "Cucumber for Java",
+            "isBundled": true
+          }
+        },
+        "java:org.springframework.cloud:spring-cloud-context": {
+          "displayName": "Spring Cloud",
+          "pluginData": {
+            "pluginIdString": "com.intellij.spring.cloud",
+            "nullablePluginName": "Spring Cloud",
+            "isBundled": true
+          }
+        },
+        "java:javax.enterprise:cdi-api": {
+          "displayName": "Java EE CDI",
+          "pluginData": {
+            "pluginIdString": "com.intellij.cdi",
+            "nullablePluginName": "Jakarta EE: Contexts and Dependency Injection (CDI)",
+            "isBundled": true
+          }
+        },
+        "java:jakarta.persistence:jakarta.persistence-api": {
+          "displayName": "Jakarta EE JPA",
+          "pluginData": {
+            "pluginIdString": "com.intellij.javaee.jpa",
+            "nullablePluginName": "Jakarta EE: Persistence (JPA)",
+            "isBundled": true
+          }
+        },
+        "maven-packaging:ear": {
+          "displayName": "EAR Maven Packaging",
+          "pluginData": {
+            "pluginIdString": "com.intellij.javaee.web",
+            "nullablePluginName": "Jakarta EE: Web/Servlets",
+            "isBundled": true
+          }
+        },
+        "java:org.openjfx:javafx-base": {
+          "displayName": "JavaFX",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.plugins.javaFX",
+            "nullablePluginName": "JavaFX",
+            "isBundled": true
+          }
+        },
+        "java:org.springframework.cloud:spring-cloud-stream": {
+          "displayName": "Spring Cloud Stream",
+          "pluginData": {
+            "pluginIdString": "com.intellij.spring.cloud",
+            "nullablePluginName": "Spring Cloud",
+            "isBundled": true
+          }
+        },
+        "java:javax.validation:validation-api": {
+          "displayName": "Java EE Bean Validation",
+          "pluginData": {
+            "pluginIdString": "com.intellij.beanValidation",
+            "nullablePluginName": "Jakarta EE: Bean Validation",
+            "isBundled": true
+          }
+        },
+        "java:io.projectreactor:reactor-core": {
+          "displayName": "Reactor",
+          "pluginData": {
+            "pluginIdString": "com.intellij.reactivestreams",
+            "nullablePluginName": "Reactive Streams",
+            "isBundled": true
+          }
+        },
+        "java:org.springframework.data:spring-data-commons": {
+          "displayName": "Spring Data",
+          "pluginData": {
+            "pluginIdString": "com.intellij.spring.data",
+            "nullablePluginName": "Spring Data",
+            "isBundled": true
+          }
+        },
+        "java:org.springframework:spring-websocket": {
+          "displayName": "Spring WebSocket",
+          "pluginData": {
+            "pluginIdString": "com.intellij.spring.websocket",
+            "nullablePluginName": "Spring WebSocket",
+            "isBundled": true
+          }
+        }
+      }
+    },
+    "com.intellij.configurationType": {
+      "featureMap": {
+        "JetRunConfigurationType": {
+          "displayName": "Kotlin",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.kotlin",
+            "nullablePluginName": "Kotlin",
+            "isBundled": true
+          }
+        },
+        "Java Scratch": {
+          "displayName": "Java Scratch",
+          "pluginData": {
+            "pluginIdString": "com.intellij.java",
+            "nullablePluginName": "Java",
+            "isBundled": true
+          }
+        },
+        "UtPlSqlConfigurationType": {
+          "displayName": "utPLSQL Test",
+          "pluginData": {
+            "pluginIdString": "com.intellij.database",
+            "nullablePluginName": "Database Tools and SQL",
+            "isBundled": true
+          }
+        },
+        "ShConfigurationType": {
+          "displayName": "Shell Script",
+          "pluginData": {
+            "pluginIdString": "com.jetbrains.sh",
+            "nullablePluginName": "Shell Script",
+            "isBundled": true
+          }
+        },
+        "SpringBootApplicationConfigurationType": {
+          "displayName": "Spring Boot",
+          "pluginData": {
+            "pluginIdString": "com.intellij.spring.boot",
+            "nullablePluginName": "Spring Boot",
+            "isBundled": true
+          }
+        },
+        "NodeunitConfigurationType": {
+          "displayName": "Nodeunit",
+          "pluginData": {
+            "pluginIdString": "NodeJS",
+            "nullablePluginName": "Node.js",
+            "isBundled": true
+          }
+        },
+        "#org.jetbrains.idea.devkit.run.PluginConfigurationType": {
+          "displayName": "Plugin",
+          "pluginData": {
+            "pluginIdString": "DevKit",
+            "nullablePluginName": "Plugin DevKit",
+            "isBundled": true
+          }
+        },
+        "AntRunConfiguration": {
+          "displayName": "Ant Target",
+          "pluginData": {
+            "pluginIdString": "AntSupport",
+            "nullablePluginName": "Ant",
+            "isBundled": true
+          }
+        },
+        "FirefoxRemoteDebugType": {
+          "displayName": "Firefox Remote",
+          "pluginData": {
+            "pluginIdString": "JavaScriptDebugger",
+            "nullablePluginName": "JavaScript Debugger",
+            "isBundled": true
+          }
+        },
+        "ComposePreviewRunConfiguration": {
+          "displayName": "Compose Preview",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.android",
+            "nullablePluginName": "Android",
+            "isBundled": true
+          }
+        },
+        "js.build_tools.npm": {
+          "displayName": "npm",
+          "pluginData": {
+            "pluginIdString": "JavaScript",
+            "nullablePluginName": "JavaScript and TypeScript",
+            "isBundled": true
+          }
+        },
+        "GlassfishConfiguration": {
+          "displayName": "GlassFish Server",
+          "pluginData": {
+            "pluginIdString": "GlassFish",
+            "nullablePluginName": "GlassFish",
+            "isBundled": true
+          }
+        },
+        "TSqltConfigurationType": {
+          "displayName": "tSQLt Test",
+          "pluginData": {
+            "pluginIdString": "com.intellij.database",
+            "nullablePluginName": "Database Tools and SQL",
+            "isBundled": true
+          }
+        },
+        "AndroidRunConfigurationType": {
+          "displayName": "Android App",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.android",
+            "nullablePluginName": "Android",
+            "isBundled": true
+          }
+        },
+        "js.build_tools.grunt": {
+          "displayName": "Grunt.js",
+          "pluginData": {
+            "pluginIdString": "JavaScript",
+            "nullablePluginName": "JavaScript and TypeScript",
+            "isBundled": true
+          }
+        },
+        "HttpClient.HttpRequestRunConfigurationType": {
+          "displayName": "HTTP Request",
+          "pluginData": {
+            "pluginIdString": "com.jetbrains.restClient",
+            "nullablePluginName": "HTTP Client",
+            "isBundled": true
+          }
+        },
+        "SwaggerCodegen": {
+          "displayName": "Swagger Codegen",
+          "pluginData": {
+            "pluginIdString": "com.intellij.swagger",
+            "nullablePluginName": "OpenAPI Specifications",
+            "isBundled": true
+          }
+        },
+        "NodeJSConfigurationType": {
+          "displayName": "Node.js",
+          "pluginData": {
+            "pluginIdString": "NodeJS",
+            "nullablePluginName": "Node.js",
+            "isBundled": true
+          }
+        },
+        "GroovyScriptRunConfiguration": {
+          "displayName": "Groovy",
+          "pluginData": {
+            "pluginIdString": "org.intellij.groovy",
+            "nullablePluginName": "Groovy",
+            "isBundled": true
+          }
+        },
+        "NodeWebKit": {
+          "displayName": "NW.js",
+          "pluginData": {
+            "pluginIdString": "JavaScriptDebugger",
+            "nullablePluginName": "JavaScript Debugger",
+            "isBundled": true
+          }
+        },
+        "mocha-javascript-test-runner": {
+          "displayName": "Mocha",
+          "pluginData": {
+            "pluginIdString": "NodeJS",
+            "nullablePluginName": "Node.js",
+            "isBundled": true
+          }
+        },
+        "KtorApplicationConfigurationType": {
+          "displayName": "Ktor",
+          "pluginData": {
+            "pluginIdString": "intellij.ktor",
+            "nullablePluginName": "Ktor",
+            "isBundled": true
+          }
+        },
+        "JavaScriptTestRunnerProtractor": {
+          "displayName": "Protractor",
+          "pluginData": {
+            "pluginIdString": "JavaScript",
+            "nullablePluginName": "JavaScript and TypeScript",
+            "isBundled": true
+          }
+        },
+        "MicronautRunConfigurationType": {
+          "displayName": "Micronaut",
+          "pluginData": {
+            "pluginIdString": "com.intellij.micronaut",
+            "nullablePluginName": "Micronaut",
+            "isBundled": true
+          }
+        },
+        "CompoundRunConfigurationType": {
+          "displayName": "Compound",
+          "pluginData": {
+            "pluginIdString": "com.intellij",
+            "nullablePluginName": "IDEA CORE",
+            "isBundled": true
+          }
+        },
+        "JavascriptDebugType": {
+          "displayName": "JavaScript Debug",
+          "pluginData": {
+            "pluginIdString": "JavaScriptDebugger",
+            "nullablePluginName": "JavaScript Debugger",
+            "isBundled": true
+          }
+        },
+        "Application": {
+          "displayName": "Application",
+          "pluginData": {
+            "pluginIdString": "com.intellij.java",
+            "nullablePluginName": "Java",
+            "isBundled": true
+          }
+        },
+        "JarApplication": {
+          "displayName": "JAR Application",
+          "pluginData": {
+            "pluginIdString": "com.intellij.java",
+            "nullablePluginName": "Java",
+            "isBundled": true
+          }
+        },
+        "MavenRunConfiguration": {
+          "displayName": "Maven",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.idea.maven",
+            "nullablePluginName": "Maven",
+            "isBundled": true
+          }
+        },
+        "TomeeConfiguration": {
+          "displayName": "TomEE Server",
+          "pluginData": {
+            "pluginIdString": "Tomcat",
+            "nullablePluginName": "Tomcat and TomEE",
+            "isBundled": true
+          }
+        },
+        "Remote": {
+          "displayName": "Remote JVM Debug",
+          "pluginData": {
+            "pluginIdString": "com.intellij.java",
+            "nullablePluginName": "Java",
+            "isBundled": true
+          }
+        },
+        "docker-deploy": {
+          "displayName": "Docker",
+          "pluginData": {
+            "pluginIdString": "com.intellij",
+            "nullablePluginName": "IDEA CORE",
+            "isBundled": true
+          }
+        },
+        "DatabaseScript": {
+          "displayName": "Database Script",
+          "pluginData": {
+            "pluginIdString": "com.intellij.database",
+            "nullablePluginName": "Database Tools and SQL",
+            "isBundled": true
+          }
+        },
+        "CucumberJavaRunConfigurationType": {
+          "displayName": "Cucumber Java",
+          "pluginData": {
+            "pluginIdString": "cucumber-java",
+            "nullablePluginName": "Cucumber for Java",
+            "isBundled": true
+          }
+        },
+        "AndroidTestRunConfigurationType": {
+          "displayName": "Android Instrumented Tests",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.android",
+            "nullablePluginName": "Android",
+            "isBundled": true
+          }
+        },
+        "JavaScriptTestRunnerJest": {
+          "displayName": "Jest",
+          "pluginData": {
+            "pluginIdString": "JavaScript",
+            "nullablePluginName": "JavaScript and TypeScript",
+            "isBundled": true
+          }
+        },
+        "JUnit": {
+          "displayName": "JUnit",
+          "pluginData": {
+            "pluginIdString": "JUnit",
+            "nullablePluginName": "JUnit",
+            "isBundled": true
+          }
+        },
+        "KotlinJavaScriptTestRunnerProtractor": {
+          "displayName": "Protractor (Kotlin)",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.kotlin",
+            "nullablePluginName": "Kotlin",
+            "isBundled": true
+          }
+        },
+        "KotlinStandaloneScriptRunConfigurationType": {
+          "displayName": "Kotlin script",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.kotlin",
+            "nullablePluginName": "Kotlin",
+            "isBundled": true
+          }
+        },
+        "JavaScriptTraceType": {
+          "displayName": "Spy-js",
+          "pluginData": {
+            "pluginIdString": "spy-js",
+            "nullablePluginName": "Spy-js",
+            "isBundled": true
+          }
+        },
+        "ReactNative": {
+          "displayName": "React Native",
+          "pluginData": {
+            "pluginIdString": "JavaScriptDebugger",
+            "nullablePluginName": "JavaScript Debugger",
+            "isBundled": true
+          }
+        },
+        "JavaScriptNodeJsTraceType": {
+          "displayName": "Spy-js for Node.js",
+          "pluginData": {
+            "pluginIdString": "spy-js",
+            "nullablePluginName": "Spy-js",
+            "isBundled": true
+          }
+        },
+        "QuarkusRunConfigurationType": {
+          "displayName": "Quarkus",
+          "pluginData": {
+            "pluginIdString": "com.intellij.quarkus",
+            "nullablePluginName": "Quarkus",
+            "isBundled": true
+          }
+        },
+        "JBossConfiguration": {
+          "displayName": "JBoss/WildFly Server",
+          "pluginData": {
+            "pluginIdString": "JBoss",
+            "nullablePluginName": "WildFly",
+            "isBundled": true
+          }
+        },
+        "XSLT": {
+          "displayName": "XSLT",
+          "pluginData": {
+            "pluginIdString": "XPathView",
+            "nullablePluginName": "XPathView + XSLT",
+            "isBundled": true
+          }
+        },
+        "#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory": {
+          "displayName": "Tomcat Server",
+          "pluginData": {
+            "pluginIdString": "Tomcat",
+            "nullablePluginName": "Tomcat and TomEE",
+            "isBundled": true
+          }
+        },
+        "GradleRunConfiguration": {
+          "displayName": "Gradle",
+          "pluginData": {
+            "pluginIdString": "com.intellij.gradle",
+            "nullablePluginName": "Gradle",
+            "isBundled": true
+          }
+        },
+        "TestNG": {
+          "displayName": "TestNG",
+          "pluginData": {
+            "pluginIdString": "TestNG-J",
+            "nullablePluginName": "TestNG",
+            "isBundled": true
+          }
+        },
+        "js.build_tools.gulp": {
+          "displayName": "Gulp.js",
+          "pluginData": {
+            "pluginIdString": "JavaScript",
+            "nullablePluginName": "JavaScript and TypeScript",
+            "isBundled": true
+          }
+        },
+        "ChromiumRemoteDebugType": {
+          "displayName": "Attach to Node.js/Chrome",
+          "pluginData": {
+            "pluginIdString": "JavaScriptDebugger",
+            "nullablePluginName": "JavaScript Debugger",
+            "isBundled": true
+          }
+        }
+      }
+    },
+    "com.intellij.facetType": {
+      "featureMap": {
+        "java-gradle": {
+          "displayName": "Java-Gradle",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.android",
+            "nullablePluginName": "Android",
+            "isBundled": true
+          }
+        },
+        "kotlin-language": {
+          "displayName": "Kotlin",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.kotlin",
+            "nullablePluginName": "Kotlin",
+            "isBundled": true
+          }
+        },
+        "javaeeApplication": {
+          "displayName": "JavaEE Application",
+          "pluginData": {
+            "pluginIdString": "com.intellij.javaee",
+            "nullablePluginName": "Jakarta EE Platform",
+            "isBundled": true
+          }
+        },
+        "android-gradle": {
+          "displayName": "Android-Gradle",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.android",
+            "nullablePluginName": "Android",
+            "isBundled": true
+          }
+        },
+        "web": {
+          "displayName": "Web",
+          "pluginData": {
+            "pluginIdString": "com.intellij.javaee.web",
+            "nullablePluginName": "Jakarta EE: Web/Servlets",
+            "isBundled": true
+          }
+        },
+        "android-artifact": {
+          "displayName": "Android Artifact",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.android",
+            "nullablePluginName": "Android",
+            "isBundled": true
+          }
+        },
+        "android": {
+          "displayName": "Android",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.android",
+            "nullablePluginName": "Android",
+            "isBundled": true
+          }
+        },
+        "jpa": {
+          "displayName": "JPA",
+          "pluginData": {
+            "pluginIdString": "com.intellij.javaee.jpa",
+            "nullablePluginName": "Jakarta EE: Persistence (JPA)",
+            "isBundled": true
+          }
+        },
+        "native-android-gradle": {
+          "displayName": "Native-Android-Gradle",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.android",
+            "nullablePluginName": "Android",
+            "isBundled": true
+          }
+        },
+        "Spring": {
+          "displayName": "Spring",
+          "pluginData": {
+            "pluginIdString": "com.intellij.spring",
+            "nullablePluginName": "Spring",
+            "isBundled": true
+          }
+        },
+        "hibernate": {
+          "displayName": "Hibernate",
+          "pluginData": {
+            "pluginIdString": "com.intellij.hibernate",
+            "nullablePluginName": "Hibernate",
+            "isBundled": true
+          }
+        },
+        "apk": {
+          "displayName": "APK",
+          "pluginData": {
+            "pluginIdString": "org.jetbrains.android",
+            "nullablePluginName": "Android",
+            "isBundled": true
+          }
+        }
+      }
+    }
+  }
+}]]></component>
+  <component name="TextMateSettings">
+    <bundles>
+      <BundleConfigBean>
+        <option name="name" value="swift" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/swift" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="handlebars" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/handlebars" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="typescript-basics" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/typescript-basics" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="mdx" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/mdx" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="coffeescript" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/coffeescript" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="objective-c" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/objective-c" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="clojure" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/clojure" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="r" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/r" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="php" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/php" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="log" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/log" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="yaml" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/yaml" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="git" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/git" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="vb" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/vb" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="python" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/python" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="javascript" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/javascript" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="dart" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/dart" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="go" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/go" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="groovy" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/groovy" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="shellscript" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/shellscript" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="toml" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/toml" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="search-result" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/search-result" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="latex" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/latex" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="razor" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/razor" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="git-base" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/git-base" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="xml" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/xml" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="less" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/less" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="docker" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/docker" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="fsharp" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/fsharp" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="scss" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/scss" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="lua" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/lua" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="make" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/make" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="jsp" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/jsp" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="java" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/java" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="diff" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/diff" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="perl" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/perl" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="rust" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/rust" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="ruby" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/ruby" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="bat" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/bat" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="julia" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/julia" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="ipynb" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/ipynb" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="json" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/json" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="powershell" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/powershell" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="html" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/html" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="markdown-basics" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/markdown-basics" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="markdown-math" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/markdown-math" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="sql" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/sql" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="hlsl" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/hlsl" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="pug" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/pug" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="kotlin" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/kotlin" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="ini" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/ini" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="csharp" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/csharp" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="cpp" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/cpp" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="shaderlab" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/shaderlab" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="css" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/css" />
+      </BundleConfigBean>
+      <BundleConfigBean>
+        <option name="name" value="viml" />
+        <option name="path" value="$APPLICATION_HOME_DIR$/plugins/textmate/lib/bundles/viml" />
+      </BundleConfigBean>
+    </bundles>
+  </component>
+</application>

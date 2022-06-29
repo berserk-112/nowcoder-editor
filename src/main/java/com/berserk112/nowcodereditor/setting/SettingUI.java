@@ -41,7 +41,7 @@ public class SettingUI {
     private JComboBox webComboBox;
     private JComboBox codeComboBox;
     private JBTextField userNameField;
-    private JBPasswordField passwordField;
+//    private JBPasswordField passwordField;
 
     private JLabel soEasyLabel;
     private JLabel easyLabel;
@@ -169,7 +169,7 @@ public class SettingUI {
         Config config = PersistentConfig.getInstance().getInitConfig();
         if (config != null) {
             userNameField.setText(config.getLoginName());
-            passwordField.setText(PersistentConfig.getInstance().getPassword(config.getLoginName()));
+//            passwordField.setText(PersistentConfig.getInstance().getPassword(config.getLoginName()));
             if (StringUtils.isNotBlank(config.getFilePath())) {
                 fileFolderBtn.setText(config.getFilePath());
             }
@@ -227,6 +227,8 @@ public class SettingUI {
         } else {
             Config currentState = new Config();
             process(currentState);
+            return true;
+/*
             if (currentState.isModified(config)) {
                 if (passwordField.getText() != null && passwordField.getText().equals(PersistentConfig.getInstance().getPassword(config.getLoginName()))) {
                     return false;
@@ -236,6 +238,7 @@ public class SettingUI {
             } else {
                 return true;
             }
+*/
         }
     }
 
@@ -251,7 +254,7 @@ public class SettingUI {
             file.mkdirs();
         }
         PersistentConfig.getInstance().setInitConfig(config);
-        PersistentConfig.getInstance().savePassword(passwordField.getText(),config.getLoginName());
+//        PersistentConfig.getInstance().savePassword(passwordField.getText(),config.getLoginName());
         CustomTreeCellRenderer.loaColor();
         TimerBarWidget.loaColor();
         NavigatorTable.loaColor();

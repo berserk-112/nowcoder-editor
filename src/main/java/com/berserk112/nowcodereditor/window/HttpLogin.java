@@ -36,7 +36,6 @@ public class HttpLogin {
                 PersistentConfig.getInstance().setInitConfig(config);
                 MessageUtils.getInstance(project).showInfoMsg("info", PropertiesUtils.getInfo("login.success"));
                 ViewManager.loadServiceData(navigatorTable, project);
-//                examineEmail(project);
             }
         });
     }

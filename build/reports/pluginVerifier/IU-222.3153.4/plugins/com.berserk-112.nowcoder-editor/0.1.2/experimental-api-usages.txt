@@ -1,0 +1,1 @@
+Experimental API method com.intellij.openapi.application.Application.invokeLaterOnWriteThread(java.lang.Runnable arg0) : void is invoked in com.berserk112.nowcodereditor.utils.FileUtils.saveEditDocument(VirtualFile) : void. This method can be changed in a future release leading to incompatibilities

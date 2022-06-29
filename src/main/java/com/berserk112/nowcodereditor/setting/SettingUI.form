@@ -354,7 +354,7 @@
         <properties>
           <enabled value="true"/>
           <foreground color="-4473925"/>
-          <selected value="true"/>
+          <selected value="false"/>
           <text value="Multiline"/>
           <toolTipText value="Content  Multiline Comment"/>
         </properties>

@@ -1,0 +1,13 @@
+com.berserk-112.nowcoder-editor:0.1.2
+\--- com.intellij:222.3153.4 [declaring module com.intellij.modules.platform]
+     +--- (failed) unresolved (optional): Plugin unresolved is not available in Marketplace https://plugins.jetbrains.com
+     +--- (optional) com.intellij.copyright:222.3153.4
+     |    \--- com.intellij:222.3153.4 (*) [declaring module com.intellij.modules.lang]
+     +--- (optional) com.intellij.java:222.3153.4
+     |    +--- com.intellij:222.3153.4 (*) [declaring module com.intellij.modules.platform]
+     |    +--- (optional) com.intellij.copyright:222.3153.4 (*)
+     |    +--- (optional) com.intellij.platform.images:222.3153.4
+     |    |    \--- com.intellij:222.3153.4 (*) [declaring module com.intellij.modules.lang]
+     |    \--- (optional) training:222.3153.4
+     |         \--- com.intellij:222.3153.4 (*) [declaring module com.intellij.modules.lang]
+     \--- (optional) com.intellij.platform.images:222.3153.4 (*)

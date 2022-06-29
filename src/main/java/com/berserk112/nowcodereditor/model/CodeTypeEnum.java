@@ -22,7 +22,7 @@ public enum CodeTypeEnum {
     RUST("Rust", "rust", ".rs", "//", "/**\n%s\n*/", 27),
     PHP("PHP", "php", ".php", "//", "/**\n%s\n*/", 8),
     BASH("Bash", "bash", ".sh", "#",": '\n%s\n'", 23),
-    MYSQL("MySQL", "mysql", ".sql", "#", "/**\n%s\n*/", 32),
+    MYSQL("MySQL", "mysql", ".sql", "#", "/*\n%s\n*/", 32),
 //    ORACLE("Oracle", "oraclesql", ".sql", "#", "/**\n%s\n*/"),
 //    MSSQLSERVER("MS SQL Server", "mssql", ".sql", "#", "/**\n%s\n*/"),
     TypeScript("TypeScript", "ts", ".ts", "//", "/**\n%s\n*/", 31),
