@@ -14,6 +14,6 @@ public class OpenInWebAction extends AbstractTreeAction {
     @Override
     public void actionPerformed(AnActionEvent anActionEvent, Config config, NavigatorTable navigatorTable, Question question) {
 
-        BrowserUtil.browse(URLUtils.getNowcoderQuestion() + question.getQuestionUUid());
+        BrowserUtil.browse(URLUtils.getNowcoderWebUrl() + question.getQuestionUUid());
     }
 }

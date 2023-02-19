@@ -27,7 +27,9 @@ public class Question {
     private Double acceptRate;
     private String questionUUid;
     private String status;
-//    private String titleSlug;
+
+
+    private String titleSlug;
 //    private boolean leaf = Boolean.FALSE;
 //    private Map<String, String> testCase;//samples
     private String inputSample;
@@ -85,6 +87,14 @@ public class Question {
         this.title = title;
     }
 
+
+    public String getTitleSlug() {
+        return titleSlug;
+    }
+
+    public void setTitleSlug(String titleSlug) {
+        this.titleSlug = titleSlug;
+    }
     public String getQuestionId() {
         return questionId;
     }

@@ -2,7 +2,7 @@ package com.berserk112.nowcodereditor.actions.toolbar;
 
 import com.berserk112.nowcodereditor.actions.AbstractAction;
 import com.berserk112.nowcodereditor.model.Config;
-import com.berserk112.nowcodereditor.setting.PersistentConfig;
+import com.berserk112.nowcodereditor.setting.NowCoderPersistentConfig;
 import com.berserk112.nowcodereditor.utils.LogUtils;
 import com.berserk112.nowcodereditor.utils.MessageUtils;
 import com.berserk112.nowcodereditor.utils.PropertiesUtils;
@@ -32,7 +32,7 @@ public class ClearAllAction extends AbstractAction {
             dialog.setTitle("Clear All");
 
             if (dialog.showAndGet()) {
-                String filePath = PersistentConfig.getInstance().getTempFilePath();
+                String filePath = NowCoderPersistentConfig.getInstance().getTempFilePath();
 
                 File file = new File(filePath);
                 if (!file.exists() || !file.isDirectory()) {

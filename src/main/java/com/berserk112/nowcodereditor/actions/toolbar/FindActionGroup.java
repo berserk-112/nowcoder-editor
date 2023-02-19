@@ -75,8 +75,6 @@ public class FindActionGroup extends ActionGroup {
             tags = ViewManager.getFilter(Constant.FIND_TYPE_LISTS);
         } else if (PluginConstant.NOWCODER_FIND_TAGS.equals(id)) {
             tags = ViewManager.getFilter(Constant.FIND_TYPE_TAGS);
-        } else if (PluginConstant.NOWCODER_FIND_CATEGORY.equals(id)) {
-            tags = ViewManager.getFilter(Constant.FIND_TYPE_CATEGORY);
         }
 
         return tags;

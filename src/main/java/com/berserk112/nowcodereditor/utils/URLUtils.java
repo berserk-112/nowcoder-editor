@@ -1,6 +1,6 @@
 package com.berserk112.nowcodereditor.utils;
 
-import com.berserk112.nowcodereditor.setting.PersistentConfig;
+import com.berserk112.nowcodereditor.setting.NowCoderPersistentConfig;
 import org.apache.commons.lang.StringUtils;
 
 /**
@@ -16,16 +16,28 @@ public class URLUtils {
 //    private static String leetcodeAll = "/api/problems/all/";
 //    private static String leetcodeGraphql = "/graphql";
 //    private static String leetcodePoints = "/points/api/";
+    private static String nowcoderCategory = "gw-c.nowcoder.com/api/sparta/coding/getKnowledgeQuestionList";
     private static String nowcoderIsLogin = "/token/login-other-place";
     private static String nowcoderLogout = "/logout/do";
     /**
      * 运行代码 提交代码
      */
     private static String nowcoderCommon = "/nccommon";
+    /**
+     * 牛客修改了提交代码的逻辑，现在需要先访问以下url,获得token,再携带这个token去提交代码
+     */
+    private static String nowcoderAccessToken = "https://gw-c.nowcoder.com/api/sparta/base-oauth/access-token?token&sceneType=1";
     private static String nowcoderTopic = "/getQuestionTopic";
     //https://www.nowcoder.com/api/questiontraining/coding/knowledge-checklist?pid=520&_=1653922171549
 //    https://www.nowcoder.com/api/questiontraining/coding/getTopicQuestion?pageSize=50&topicId=196&page=1&_=1653922187064
-    private static String nowcoderSubmit = "/submit_cd";
+
+    private static String nowcoderApiService = "/api/service";
+    private static String nowcoderVictorinox = "victorinox.nowcoder.com";
+
+
+    private static String nowcoderJudge = "/judge";
+    private static String nowcoderSubmit = "/submit";
+    private static String nowcoderSubmitStatus = "/submit-status";
     private static String nowcoderSubmission = "/problem/coding/submission";
     private static String nowcoderSubmissionDetail = "/detail";
     private static String nowcoderSubmissionHistory = "/history";
@@ -45,7 +57,7 @@ public class URLUtils {
 //    private static String leetcodeRandomOneQuestion = "/problems/random-one-question/all";
 
     public static String getNowcoderHost() {
-        String host = PersistentConfig.getInstance().getConfig().getUrl();
+        String host = NowCoderPersistentConfig.getInstance().getConfig().getUrl();
         if (StringUtils.isBlank(host)) {
             return nowcoder;
         }
@@ -66,6 +78,10 @@ public class URLUtils {
     public static String getNowcoderUrl() {
         return nowcoderUrl + getNowcoderHost();
     }
+
+    public static String getNowcoderVictorinox() {
+        return nowcoderUrl + nowcoderVictorinox;
+    }
     public static String getNowcoderIsLogin() {
         return getNowcoderCommon() + nowcoderIsLogin;
     }
@@ -74,8 +90,20 @@ public class URLUtils {
         return getNowcoderUrl() + nowcoderCommon;
     }
 
+    public static String getToken() {
+        return nowcoderAccessToken;
+    }
+/*
     public static String getNowcoderSubmit() {
         return getNowcoderCommon() + nowcoderSubmit;
+    }
+*/
+    public static String getNowcoderSubmit() {
+        return getNowcoderVictorinox() + nowcoderApiService + nowcoderJudge + nowcoderSubmit;
+    }
+
+    public static String getNowcoderSubmitStatus() {
+        return getNowcoderVictorinox() + nowcoderApiService + nowcoderJudge + nowcoderSubmitStatus;
     }
 
     public static String getNowcoderTags() {
@@ -84,6 +112,10 @@ public class URLUtils {
 
     public static String getNowcoderQuestion() {
         return getNowcoderUrl() + nowcoderQuestionApi + "/getTopicQuestion/";
+    }
+
+    public static String getNowcoderWebUrl() {
+        return getNowcoderUrl() + "/practice/";
     }
     public static String getNowcoderTopic() {
         return getNowcoderUrl() + nowcoderQuestionApi + nowcoderTopic;

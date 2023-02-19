@@ -3,7 +3,7 @@ package com.berserk112.nowcodereditor.manager;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.berserk112.nowcodereditor.model.*;
-import com.berserk112.nowcodereditor.setting.PersistentConfig;
+import com.berserk112.nowcodereditor.setting.NowCoderPersistentConfig;
 import com.berserk112.nowcodereditor.utils.*;
 import com.intellij.openapi.project.Project;
 import org.apache.commons.lang.StringUtils;
@@ -68,9 +68,9 @@ public class SubmissionManager {
             MessageUtils.getInstance(project).showWarnMsg("info", PropertiesUtils.getInfo("login.not"));
             return;
         }
-        Config config = PersistentConfig.getInstance().getInitConfig();
+        Config config = NowCoderPersistentConfig.getInstance().getInitConfig();
         CodeTypeEnum codeTypeEnum = CodeTypeEnum.getCodeTypeEnumByLangSlug(submission.getLang());
-        String filePath = PersistentConfig.getInstance().getTempFilePath() + Constant.DOC_SUBMISSION + VelocityUtils.convert(config.getCustomFileName(), question) + submission.getId() + ".txt";
+        String filePath = NowCoderPersistentConfig.getInstance().getTempFilePath() + Constant.DOC_SUBMISSION + VelocityUtils.convert(config.getCustomFileName(), question) + submission.getId() + ".txt";
 
         File file = new File(filePath);
         if (file.exists()) {

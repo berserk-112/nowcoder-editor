@@ -11,6 +11,8 @@ public class HttpRequest {
     private String url;
 
     private String body;
+
+    private String urlParam;
     /**
      * POST
      */
@@ -65,5 +67,17 @@ public class HttpRequest {
         } else {
             body = body + "&" + key + "=" +value;
         }
+    }
+
+    public void addUrlParam(String key, String value) throws UnsupportedEncodingException{
+        if (urlParam == null || urlParam.isEmpty()) {
+            urlParam = key + "=" + value;
+        } else {
+            urlParam = urlParam + "&" + key + "=" +value;
+        }
+    }
+
+    public void finshAddUrlParams() {
+        url = url + "?" + urlParam;
     }
 }

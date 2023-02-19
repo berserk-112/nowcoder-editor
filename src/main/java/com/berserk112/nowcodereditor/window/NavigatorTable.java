@@ -7,7 +7,7 @@ import com.berserk112.nowcodereditor.manager.ViewManager;
 import com.berserk112.nowcodereditor.model.Config;
 import com.berserk112.nowcodereditor.model.PageInfo;
 import com.berserk112.nowcodereditor.model.Question;
-import com.berserk112.nowcodereditor.setting.PersistentConfig;
+import com.berserk112.nowcodereditor.setting.NowCoderPersistentConfig;
 import com.berserk112.nowcodereditor.utils.PropertiesUtils;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.progress.ProgressIndicator;
@@ -156,7 +156,7 @@ public class NavigatorTable extends JPanel {
     }
 
     public static void loaColor() {
-        Config config = PersistentConfig.getInstance().getInitConfig();
+        Config config = NowCoderPersistentConfig.getInstance().getInitConfig();
         if (config != null) {
             Color[] colors = config.getFormatLevelColour();
             Level1 = colors[0];

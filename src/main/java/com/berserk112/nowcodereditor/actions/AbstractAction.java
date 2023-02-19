@@ -2,7 +2,7 @@ package com.berserk112.nowcodereditor.actions;
 
 import com.berserk112.nowcodereditor.model.Config;
 import com.berserk112.nowcodereditor.model.PluginConstant;
-import com.berserk112.nowcodereditor.setting.PersistentConfig;
+import com.berserk112.nowcodereditor.setting.NowCoderPersistentConfig;
 import com.berserk112.nowcodereditor.utils.MessageUtils;
 import com.berserk112.nowcodereditor.utils.PropertiesUtils;
 import com.intellij.openapi.actionSystem.AnAction;
@@ -11,7 +11,6 @@ import com.intellij.openapi.options.ShowSettingsUtil;
 import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.progress.ProgressManager;
 import com.intellij.openapi.progress.Task;
-import org.apache.commons.lang.StringUtils;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -20,7 +19,7 @@ import org.jetbrains.annotations.NotNull;
 public abstract class AbstractAction extends AnAction {
     @Override
     public void actionPerformed(AnActionEvent anActionEvent) {
-        Config config = PersistentConfig.getInstance().getInitConfig();
+        Config config = NowCoderPersistentConfig.getInstance().getInitConfig();
         if (config == null) {
             MessageUtils.getInstance(anActionEvent.getProject()).showWarnMsg("warning", PropertiesUtils.getInfo("config.first"));
             ShowSettingsUtil.getInstance().showSettingsDialog(anActionEvent.getProject(), PluginConstant.APPLICATION_CONFIGURABLE_DISPLAY_NAME);

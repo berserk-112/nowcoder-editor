@@ -3,7 +3,7 @@ package com.berserk112.nowcodereditor.utils;
 import com.berserk112.nowcodereditor.model.CodeTypeEnum;
 import com.berserk112.nowcodereditor.model.Config;
 import com.berserk112.nowcodereditor.model.Constant;
-import com.berserk112.nowcodereditor.setting.PersistentConfig;
+import com.berserk112.nowcodereditor.setting.NowCoderPersistentConfig;
 import com.github.promeg.pinyinhelper.Pinyin;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.commons.lang3.time.DateFormatUtils;
@@ -174,7 +174,7 @@ public class VelocityTool extends StringUtils {
      * @return
      */
     public static String SUBMIT_REGION_BEGIN() {
-        Config config = PersistentConfig.getInstance().getInitConfig();
+        Config config = NowCoderPersistentConfig.getInstance().getInitConfig();
         String codeType = config.getCodeType();
         CodeTypeEnum codeTypeEnum = CodeTypeEnum.getCodeTypeEnum(codeType);
         return codeTypeEnum.getComment() + Constant.SUBMIT_REGION_BEGIN;
@@ -187,7 +187,7 @@ public class VelocityTool extends StringUtils {
      * @return
      */
     public static String SUBMIT_REGION_END() {
-        Config config = PersistentConfig.getInstance().getInitConfig();
+        Config config = NowCoderPersistentConfig.getInstance().getInitConfig();
         String codeType = config.getCodeType();
         CodeTypeEnum codeTypeEnum = CodeTypeEnum.getCodeTypeEnum(codeType);
         return codeTypeEnum.getComment() + Constant.SUBMIT_REGION_END;

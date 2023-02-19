@@ -81,7 +81,7 @@ public class HttpRequestUtils {
     public static boolean isLogin() {
         HttpRequest request = HttpRequest.get(URLUtils.getNowcoderIsLogin());
         HttpResponse response = executeGet(request);
-        if (response.getStatusCode() == 200) {
+        if (response.getStatusCode() == 200 && !response.getBody().contains("999")) {
             return Boolean.TRUE;
         }
         return Boolean.FALSE;

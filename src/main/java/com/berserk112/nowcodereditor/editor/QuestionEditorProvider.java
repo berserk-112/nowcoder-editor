@@ -2,7 +2,7 @@ package com.berserk112.nowcodereditor.editor;
 
 import com.berserk112.nowcodereditor.model.Config;
 import com.berserk112.nowcodereditor.model.NowcoderEditor;
-import com.berserk112.nowcodereditor.setting.PersistentConfig;
+import com.berserk112.nowcodereditor.setting.NowCoderPersistentConfig;
 import com.berserk112.nowcodereditor.setting.ProjectConfig;
 import com.berserk112.nowcodereditor.utils.LogUtils;
 import com.intellij.openapi.fileEditor.FileEditor;
@@ -28,7 +28,7 @@ public class QuestionEditorProvider extends SplitTextEditorProvider {
     @Override
     public boolean accept(@NotNull Project project, @NotNull VirtualFile file) {
         try {
-            Config config = PersistentConfig.getInstance().getInitConfig();
+            Config config = NowCoderPersistentConfig.getInstance().getInitConfig();
             if (config == null || !config.getQuestionEditor()) {
                 return false;
             }

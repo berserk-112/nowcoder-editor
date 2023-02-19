@@ -3,7 +3,7 @@ package com.berserk112.nowcodereditor.manager;
 import com.alibaba.fastjson.JSONObject;
 import com.berserk112.nowcodereditor.listener.QuestionStatusListener;
 import com.berserk112.nowcodereditor.model.*;
-import com.berserk112.nowcodereditor.setting.PersistentConfig;
+import com.berserk112.nowcodereditor.setting.NowCoderPersistentConfig;
 import com.berserk112.nowcodereditor.utils.*;
 import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.progress.ProgressManager;
@@ -16,6 +16,7 @@ import org.jetbrains.annotations.NotNull;
 import java.io.File;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
+import java.net.CookieManager;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.util.function.BiConsumer;
@@ -26,7 +27,7 @@ import java.util.function.BiConsumer;
 public class CodeManager {
 
     public static void openCode(Question question, Project project) {
-        Config config = PersistentConfig.getInstance().getInitConfig();
+        Config config = NowCoderPersistentConfig.getInstance().getInitConfig();
         String codeType = config.getCodeType();
         CodeTypeEnum codeTypeEnum = CodeTypeEnum.getCodeTypeEnum(codeType);
         if (codeTypeEnum == null) {
@@ -42,7 +43,7 @@ public class CodeManager {
             openContent(question, project, false);
         }
 
-        String filePath = PersistentConfig.getInstance().getTempFilePath() + VelocityUtils.convert(config.getCustomFileName(), question) + codeTypeEnum.getSuffix();
+        String filePath = NowCoderPersistentConfig.getInstance().getTempFilePath() + VelocityUtils.convert(config.getCustomFileName(), question) + codeTypeEnum.getSuffix();
 
         File file = new File(filePath);
         BiConsumer<NowcoderEditor, String> fillPath = (e, s) -> e.setPath(s);
@@ -57,7 +58,7 @@ public class CodeManager {
 
 
     public static void openContent(Question question, Project project, boolean isOpen) {
-        Config config = PersistentConfig.getInstance().getInitConfig();
+        Config config = NowCoderPersistentConfig.getInstance().getInitConfig();
         String codeType = config.getCodeType();
         CodeTypeEnum codeTypeEnum = CodeTypeEnum.getCodeTypeEnum(codeType);
         if (codeTypeEnum == null) {
@@ -69,7 +70,7 @@ public class CodeManager {
             return;
         }
 
-        String filePath = PersistentConfig.getInstance().getTempFilePath() + Constant.DOC_CONTENT + VelocityUtils.convert(config.getCustomFileName(), question) + ".md";
+        String filePath = NowCoderPersistentConfig.getInstance().getTempFilePath() + Constant.DOC_CONTENT + VelocityUtils.convert(config.getCustomFileName(), question) + ".md";
 
         File file = new File(filePath);
         BiConsumer<NowcoderEditor, String> fillPath = (e, s) -> e.setContentPath(s);
@@ -83,7 +84,7 @@ public class CodeManager {
 
 
     public static void SubmitCode(Question question, Project project) {
-        Config config = PersistentConfig.getInstance().getInitConfig();
+        Config config = NowCoderPersistentConfig.getInstance().getInitConfig();
         String codeType = config.getCodeType();
         CodeTypeEnum codeTypeEnum = CodeTypeEnum.getCodeTypeEnum(codeType);
         String code = getCodeText(question, config, codeTypeEnum, project);
@@ -96,33 +97,64 @@ public class CodeManager {
         }
 
         try {
-            HttpRequest httpRequest = HttpRequest.post(URLUtils.getNowcoderSubmit(), "application/x-www-form-urlencoded; charset=UTF-8");
-            httpRequest.addParam("questionId", question.getQuestionId());
-            httpRequest.addParam("content", URLEncoder.encode(code, StandardCharsets.UTF_8.toString()));
-            httpRequest.addParam("language", String.valueOf(codeTypeEnum.getLangId()));
-            httpRequest.addHeader("Accept", "application/x-www-form-urlencoded; charset=UTF-8");
+            HttpRequest requestToken = HttpRequest.get(URLUtils.getToken());
+            requestToken.addHeader("Accept", "text/plain, */*; q=0.01");
+            requestToken.addHeader("content-type", "application/json");
+            HttpResponse responseToken = HttpRequestUtils.executeGet(requestToken);
+            String token = "";
+            if (responseToken != null && responseToken.getStatusCode() == 200) {
+                String body = responseToken.getBody();
+                JSONObject data = JSONObject.parseObject(body).getJSONObject("data");
+                if (data != null && !data.isEmpty()) {
+                    token = data.get("accessToken").toString();
+                } else {
+                    MessageUtils.getInstance(project).showWarnMsg("warning", PropertiesUtils.getInfo("request.cookie.invalid"));
+                    return;
+                }
+                MessageUtils.getInstance(project).showInfoMsg("info", PropertiesUtils.getInfo("request.pending"));
+            } else {
+                MessageUtils.getInstance(project).showWarnMsg("warning", PropertiesUtils.getInfo("request.token.failed"));
+                return;
+            }
+
+            HttpRequest httpRequest = HttpRequest.post(URLUtils.getNowcoderSubmit(), "application/json");
+            httpRequest.addHeader("Accept", "text/plain, */*; q=0.01");
+//            httpRequest.addHeader("Origin", "https://www.nowcoder.com");
+//            httpRequest.addHeader("Content-Type", "application/json");
+            httpRequest.addHeader("Cookie", config.getCookie(config.getUrl() + config.getLoginName()));
+            httpRequest.setBody(getCodeRequestBody(question, config, code, token, codeTypeEnum));
+//            httpRequest.addParam();
             HttpResponse response = HttpRequestUtils.executePost(httpRequest);
             if (response != null && response.getStatusCode() == 200) {
                 String body = response.getBody();
                 JSONObject returnObj = JSONObject.parseObject(body);
-                ProgressManager.getInstance().run(new SubmitCheckTask(returnObj, codeTypeEnum, question, project));
+                ProgressManager.getInstance().run(new SubmitCheckTask(returnObj, codeTypeEnum, question, project, token));
                 MessageUtils.getInstance(project).showInfoMsg("info", PropertiesUtils.getInfo("request.pending"));
             } else if (response != null && response.getStatusCode() == 429) {
                 MessageUtils.getInstance(project).showInfoMsg("info", PropertiesUtils.getInfo("request.pending"));
             } else {
                 LogUtils.LOG.error("提交失败：url：" + httpRequest.getUrl() + ";param:" + ";body:" + response.getBody());
-                MessageUtils.getInstance(project).showWarnMsg("error", PropertiesUtils.getInfo("request.failed"));
+                MessageUtils.getInstance(project).showWarnMsg("warning", PropertiesUtils.getInfo("request.failed"));
             }
         } catch (Exception i) {
-            LogUtils.LOG.error("SubmitCode error", i);
-            MessageUtils.getInstance(project).showWarnMsg("error", PropertiesUtils.getInfo("response.code"));
+            LogUtils.LOG.error("SubmitCode/RunCode error", i);
+            MessageUtils.getInstance(project).showWarnMsg("warning", PropertiesUtils.getInfo("response.code"));
 
         }
 
     }
 
+    public static String getCodeRequestBody(Question question, Config config, String code, String token, CodeTypeEnum codeTypeEnum) {
+        CodeRquestBody codeRquestBody = new CodeRquestBodyBuilder().setContent(code)
+                .setQuestionId(question.getQuestionId()).setLanguage(codeTypeEnum.getLangId().toString())
+                .setSubmitType(1).setAppId(9).setToken(token)
+                .setUserId(Integer.parseInt(config.getUserId())).createCodeRquestBody();
+        return JSONObject.toJSONString(codeRquestBody);
+    }
     public static void RunCodeCode(Question question, Project project) {
-        Config config = PersistentConfig.getInstance().getInitConfig();
+        SubmitCode(question, project);
+/*
+        Config config = NowCoderPersistentConfig.getInstance().getInitConfig();
         String codeType = config.getCodeType();
         CodeTypeEnum codeTypeEnum = CodeTypeEnum.getCodeTypeEnum(codeType);
 
@@ -137,6 +169,7 @@ public class CodeManager {
 
         try {
             HttpRequest httpRequest = HttpRequest.post(URLUtils.getNowcoderRuncode(), "application/x-www-form-urlencoded; charset=UTF-8");
+*/
 /*
             StringBuilder sb = new StringBuilder();
             sb.append("selfType=14").append("&questionId=" + question.getQuestionId())
@@ -144,7 +177,8 @@ public class CodeManager {
                     .append("&selfOutput=" + question.getOutputSample())
                     .append("&content=" + question.getCode())
                     .append("&language=" + question.getLangSlug());
-*/
+*//*
+
             httpRequest.addParam("selfType", "14");
             httpRequest.addParam("questionId", question.getQuestionId());
             httpRequest.addParam("selfInput", URLEncoder.encode(question.getInputSample(), StandardCharsets.UTF_8.toString()));
@@ -169,6 +203,7 @@ public class CodeManager {
         } catch (Exception i) {
             MessageUtils.getInstance(project).showWarnMsg("error", PropertiesUtils.getInfo("response.code"));
         }
+*/
     }
 
     private static String getCodeText(Question question, Config config, CodeTypeEnum codeTypeEnum, Project project) {
@@ -180,7 +215,7 @@ public class CodeManager {
             MessageUtils.getInstance(project).showWarnMsg("info", PropertiesUtils.getInfo("login.not"));
             return null;
         }
-        String filePath = PersistentConfig.getInstance().getTempFilePath() + VelocityUtils.convert(config.getCustomFileName(), question) + codeTypeEnum.getSuffix();
+        String filePath = NowCoderPersistentConfig.getInstance().getTempFilePath() + VelocityUtils.convert(config.getCustomFileName(), question) + codeTypeEnum.getSuffix();
         File file = new File(filePath);
         if (!file.exists()) {
             MessageUtils.getInstance(project).showWarnMsg("info", PropertiesUtils.getInfo("request.code"));
@@ -192,6 +227,10 @@ public class CodeManager {
             }
 
             String code = FileUtils.getClearCommentFileBody(file, codeTypeEnum);
+            if (config.getCustomCode() && config.getCustomFileName().contains("titleSlug") && StringUtils.isNotBlank(question.getTitleSlug())) {
+                code = code.replace(VelocityTool.camelCaseName(question.getTitleSlug()), "Solution");
+                code = code += "}";
+            }
             if (StringUtils.isBlank(code)) {
                 MessageUtils.getInstance(project).showWarnMsg("info", PropertiesUtils.getInfo("request.empty"));
                 return null;
@@ -243,32 +282,45 @@ public class CodeManager {
         private CodeTypeEnum codeTypeEnum;
         private Project project;
 
-        public SubmitCheckTask(JSONObject returnObj, CodeTypeEnum codeTypeEnum, Question question, Project project) {
+        private String token;
+
+        public SubmitCheckTask(JSONObject returnObj, CodeTypeEnum codeTypeEnum, Question question, Project project, String token) {
             super(project, PluginConstant.PLUGIN_NAME + ".submitCheckTask", true);
             this.returnObj = returnObj;
             this.codeTypeEnum = codeTypeEnum;
             this.question = question;
             this.project = project;
+            this.token = token;
         }
 
         @Override
         public void run(@NotNull ProgressIndicator progressIndicator) {
-            String key = returnObj.getString("data");
+            Config config = NowCoderPersistentConfig.getInstance().getConfig();
+            String key = returnObj.getJSONObject("data").getString("id");
             for (int i = 0; i < 100; i++) {
                 if (progressIndicator.isCanceled()) {
                     MessageUtils.getInstance(project).showWarnMsg("error", PropertiesUtils.getInfo("request.cancel"));
                     return;
                 }
                 try {
-                    URIBuilder uriBuilder = new URIBuilder();
-                    uriBuilder.addParameter("submissionId", key);
-                    HttpRequest httpRequest = HttpRequest.get(URLUtils.getNowcoderStatus() + uriBuilder);
-                    HttpResponse response = HttpRequestUtils.executeGet(httpRequest);
+                    HttpRequest requestStatus = HttpRequest.get(URLUtils.getNowcoderSubmitStatus());
+                    requestStatus.addUrlParam("id", key);
+                    requestStatus.addUrlParam("tagId", "0");
+                    requestStatus.addUrlParam("appId", "9");
+                    requestStatus.addUrlParam("userId", config.getUserId());
+                    requestStatus.addUrlParam("token", token);
+                    requestStatus.addUrlParam("submitType", "1");
+                    requestStatus.finshAddUrlParams();
+//                    requestStatus.addHeader("Accept", "*/*");
+                    requestStatus.addHeader("Accept", "text/plain, */*; q=0.01");
+
+
+                    HttpResponse response = HttpRequestUtils.executeGet(requestStatus);
                     if (response != null && response.getStatusCode() == 200) {
                         String body = response.getBody();
-                        JSONObject jsonObject = JSONObject.parseObject(body);
+                        JSONObject jsonObject = JSONObject.parseObject(body).getJSONObject("data");
                         if (!"等待判题".equals(jsonObject.getString("judgeReplyDesc"))) {
-                            if (Integer.valueOf(5).equals(jsonObject.getInteger("status"))) {
+                            if (Integer.valueOf(5).equals(jsonObject.getInteger("status"))) { //通过
                                 String runtime = jsonObject.getString("timeConsumption") + "ms";
                                 String runtimePercentile = jsonObject.getJSONObject("timeMemoryComparison").getBigDecimal("timePercent")
                                         .multiply(BigDecimal.valueOf(100)).setScale(2, RoundingMode.HALF_UP).toString() + "%";
@@ -281,6 +333,9 @@ public class CodeManager {
                                         memory, memoryPercentile, codeTypeEnum.getType()));
                                 question.setStatus("ac");
                                 project.getMessageBus().syncPublisher(QuestionStatusListener.QUESTION_STATUS_TOPIC).updateTable(question);
+                            } else if ("编译错误".equals(jsonObject.getString("judgeReplyDesc"))) {
+                                String memo = jsonObject.getString("memo");
+                                MessageUtils.getInstance(project).showInfoMsg("error", PropertiesUtils.getInfo("submit.compile.error", memo));
                             } else {
 
                                 String input = jsonObject.getString("userInput");

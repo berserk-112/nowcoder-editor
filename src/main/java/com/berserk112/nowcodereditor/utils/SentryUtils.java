@@ -2,7 +2,7 @@ package com.berserk112.nowcodereditor.utils;
 
 import com.berserk112.nowcodereditor.model.Config;
 import com.berserk112.nowcodereditor.model.PluginConstant;
-import com.berserk112.nowcodereditor.setting.PersistentConfig;
+import com.berserk112.nowcodereditor.setting.NowCoderPersistentConfig;
 import com.intellij.ide.plugins.PluginManagerCore;
 import com.intellij.openapi.application.ApplicationInfo;
 import com.intellij.openapi.application.impl.ApplicationInfoImpl;
@@ -60,11 +60,11 @@ public class SentryUtils {
 
         final Context context = sentry.getContext();
 
-        final Config config = PersistentConfig.getInstance().getInitConfig();
+        final Config config = NowCoderPersistentConfig.getInstance().getInitConfig();
         if (config != null) {
 
             UserBuilder userBuilder = new UserBuilder();
-            userBuilder.setId(config.getId());
+            userBuilder.setId(config.getUserId());
 
             Map<String, Object> userConfig = new HashMap<>();
             userConfig.put("version", config.getVersion());

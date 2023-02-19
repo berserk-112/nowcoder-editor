@@ -3,7 +3,7 @@ package com.berserk112.nowcodereditor.renderer;
 
 import com.berserk112.nowcodereditor.model.Config;
 import com.berserk112.nowcodereditor.model.Question;
-import com.berserk112.nowcodereditor.setting.PersistentConfig;
+import com.berserk112.nowcodereditor.setting.NowCoderPersistentConfig;
 import com.intellij.ide.util.treeView.NodeRenderer;
 
 import javax.imageio.ImageIO;
@@ -29,7 +29,7 @@ public class CustomTreeCellRenderer extends NodeRenderer {
     }
 
     public static void loaColor(){
-        Config config = PersistentConfig.getInstance().getInitConfig();
+        Config config = NowCoderPersistentConfig.getInstance().getInitConfig();
         if (config != null) {
             Color[] colors = config.getFormatLevelColour();
             Level1 = colors[0];

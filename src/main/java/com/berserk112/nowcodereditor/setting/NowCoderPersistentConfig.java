@@ -4,7 +4,6 @@ import com.berserk112.nowcodereditor.model.Config;
 import com.berserk112.nowcodereditor.model.PluginConstant;
 import com.berserk112.nowcodereditor.utils.MessageUtils;
 import com.berserk112.nowcodereditor.utils.PropertiesUtils;
-import com.berserk112.nowcodereditor.utils.URLUtils;
 import com.berserk112.nowcodereditor.model.Constant;
 import com.intellij.credentialStore.CredentialAttributes;
 import com.intellij.credentialStore.Credentials;
@@ -23,8 +22,8 @@ import java.util.Map;
 /**
  * @author shuzijun
  */
-@State(name = "PersistentConfig" + PluginConstant.ACTION_SUFFIX, storages = {@Storage(value = PluginConstant.ACTION_PREFIX + "-config.xml", roamingType = RoamingType.DISABLED)})
-public class PersistentConfig implements PersistentStateComponent<PersistentConfig> {
+@State(name = "NowCoderPersistentConfig" + PluginConstant.ACTION_SUFFIX, storages = {@Storage(value = PluginConstant.ACTION_PREFIX + "-config.xml", roamingType = RoamingType.DISABLED)})
+public class NowCoderPersistentConfig implements PersistentStateComponent<NowCoderPersistentConfig> {
 
     public static String PATH = "nowcoder" + File.separator + "editor";
     public static String OLDPATH = "nowcoder-plugin";
@@ -34,19 +33,19 @@ public class PersistentConfig implements PersistentStateComponent<PersistentConf
 
 
     @Nullable
-    public static PersistentConfig getInstance() {
-        return ServiceManager.getService(PersistentConfig.class);
+    public static NowCoderPersistentConfig getInstance() {
+        return ServiceManager.getService(NowCoderPersistentConfig.class);
     }
 
     @Nullable
     @Override
-    public PersistentConfig getState() {
+    public NowCoderPersistentConfig getState() {
         return this;
     }
 
     @Override
-    public void loadState(@NotNull PersistentConfig persistentConfig) {
-        XmlSerializerUtil.copyBean(persistentConfig, this);
+    public void loadState(@NotNull NowCoderPersistentConfig nowCoderPersistentConfig) {
+        XmlSerializerUtil.copyBean(nowCoderPersistentConfig, this);
     }
 
     public Config getInitConfig() {

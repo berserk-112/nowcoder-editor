@@ -16,6 +16,7 @@ public class Tag {
     private String type; //topic tab pid
     private boolean isSelect = false;
 
+    private boolean hasPid = true;
     private List<Tag> Lists = new ArrayList<>();
     public boolean isSelect() {
         return isSelect;
@@ -55,5 +56,13 @@ public class Tag {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    public boolean isHasPid() {
+        return hasPid;
+    }
+
+    public void setHasPid(boolean hasPid) {
+        this.hasPid = hasPid;
     }
 }

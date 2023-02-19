@@ -3,7 +3,7 @@ package com.berserk112.nowcodereditor.actions.toolbar;
 import com.berserk112.nowcodereditor.actions.AbstractAction;
 import com.berserk112.nowcodereditor.manager.ViewManager;
 import com.berserk112.nowcodereditor.model.Config;
-import com.berserk112.nowcodereditor.setting.PersistentConfig;
+import com.berserk112.nowcodereditor.setting.NowCoderPersistentConfig;
 import com.berserk112.nowcodereditor.utils.*;
 import com.berserk112.nowcodereditor.window.*;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -45,6 +45,10 @@ public class LoginAction extends AbstractAction {
             MessageUtils.getInstance(anActionEvent.getProject()).showWarnMsg("info", PropertiesUtils.getInfo("config.user"));
             return;
         }
+        if (StringUtils.isBlank(config.getUserId())) {
+            MessageUtils.getInstance(anActionEvent.getProject()).showWarnMsg("info", PropertiesUtils.getInfo("config.userId"));
+            return;
+        }
 
         if (StringUtils.isNotBlank(config.getCookie(config.getUrl() + config.getLoginName()))) {
             List<HttpCookie> cookieList = CookieUtils.toHttpCookie(config.getCookie(config.getUrl() + config.getLoginName()));
@@ -55,7 +59,7 @@ public class LoginAction extends AbstractAction {
                 return;
             } else {
                 config.addCookie(config.getUrl() + config.getLoginName(), null);
-                PersistentConfig.getInstance().setInitConfig(config);
+                NowCoderPersistentConfig.getInstance().setInitConfig(config);
             }
         }
 

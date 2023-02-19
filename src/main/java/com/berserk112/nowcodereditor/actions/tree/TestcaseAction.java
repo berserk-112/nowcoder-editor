@@ -4,7 +4,7 @@ import com.berserk112.nowcodereditor.manager.CodeManager;
 import com.berserk112.nowcodereditor.model.CodeTypeEnum;
 import com.berserk112.nowcodereditor.model.Config;
 import com.berserk112.nowcodereditor.model.Question;
-import com.berserk112.nowcodereditor.setting.PersistentConfig;
+import com.berserk112.nowcodereditor.setting.NowCoderPersistentConfig;
 import com.berserk112.nowcodereditor.utils.MessageUtils;
 import com.berserk112.nowcodereditor.utils.PropertiesUtils;
 import com.berserk112.nowcodereditor.window.NavigatorTable;
@@ -22,7 +22,7 @@ public class TestcaseAction extends AbstractTreeAction {
     @Override
     public void actionPerformed(AnActionEvent anActionEvent, Config config, NavigatorTable navigatorTable, Question question) {
         if (StringUtils.isBlank(question.getInputSample())) {
-            String codeType = PersistentConfig.getInstance().getInitConfig().getCodeType();
+            String codeType = NowCoderPersistentConfig.getInstance().getInitConfig().getCodeType();
             CodeTypeEnum codeTypeEnum = CodeTypeEnum.getCodeTypeEnum(codeType);
 
             CodeManager.setTestCaeAndLang(question, codeTypeEnum, anActionEvent.getProject());

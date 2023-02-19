@@ -13,7 +13,7 @@ public class Config {
 
     private Integer version;
 
-    private String id;
+    private String userId;
 
     /**
      * 配置名称
@@ -115,12 +115,12 @@ public class Config {
 
     private List<String> favoriteList;
 
-    public String getId() {
-        return id;
+    public String getUserId() {
+        return userId;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setUserId(String userId) {
+        this.userId = userId;
     }
 
     public String getName() {
@@ -378,6 +378,7 @@ public class Config {
             return false;
         }
         if (!Objects.equals(loginName, config.loginName)) return false;
+        if (!Objects.equals(userId, config.userId)) return false;
         if (!Objects.equals(filePath, config.filePath)) return false;
         if (!Objects.equals(codeType, config.codeType)) return false;
         if (!Objects.equals(url, config.url)) return false;

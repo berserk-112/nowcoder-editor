@@ -3,7 +3,7 @@ package com.berserk112.nowcodereditor.manager;
 import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.berserk112.nowcodereditor.model.*;
-import com.berserk112.nowcodereditor.setting.PersistentConfig;
+import com.berserk112.nowcodereditor.setting.NowCoderPersistentConfig;
 import com.berserk112.nowcodereditor.utils.*;
 import com.berserk112.nowcodereditor.window.WindowFactory;
 import com.google.common.collect.Lists;
@@ -15,13 +15,11 @@ import org.apache.http.client.utils.URIBuilder;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
-import java.io.UnsupportedEncodingException;
-import java.net.URI;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 /**
  * @author shuzijun
@@ -50,7 +48,7 @@ public class QuestionManager {
         if (HttpRequestUtils.isLogin()) {
             if (response != null && response.getStatusCode() == 200) {
                 ApplicationManager.getApplication().invokeAndWait(() -> {
-                    WindowFactory.updateTitle(project, PersistentConfig.getInstance().getInitConfig().getLoginName());
+                    WindowFactory.updateTitle(project, NowCoderPersistentConfig.getInstance().getInitConfig().getLoginName());
                 });
             } else {
                 LogUtils.LOG.error("Request userStatus  failed, status:" + response == null ? "" : response.getStatusCode());
@@ -238,6 +236,13 @@ public class QuestionManager {
                 JSONObject object = jsonArray.getJSONObject(i);
                 Tag tag = new Tag();
                 tag.setType("category");
+                Object pid = object.getJSONArray("list").getJSONObject(0).get("pid");
+                if (pid != null) {
+                    tag.setTagId((int)pid);
+                } else {
+                    tag.setTagId((int)object.getJSONArray("list").getJSONObject(0).get("topic"));
+                    tag.setHasPid(false);
+                }
                 tag.setName(object.getString("name"));
                 tags.add(tag);
             }
@@ -298,14 +303,34 @@ public class QuestionManager {
                 question.setTitle(jsonObject.getString("title"));
                 question.setLevel(questionInfo.getInteger("difficulty"));
 
+                Config config = NowCoderPersistentConfig.getInstance().getConfig();
                 Document doc = Jsoup.connect(URLUtils.getNowcoderPractice() + question.getQuestionUUid()).get();
                 String code = doc.getElementById(codeTypeEnum.getLangSlug() + "Tpl") == null ? "" : doc.getElementById(codeTypeEnum.getLangSlug() + "Tpl").text();
+//                code = code.substring(code.indexOf("public") + 7);
                 if (!StringUtils.isBlank(code)) {
+//                    question.setTitleSlug(code.substring(code.indexOf("public")).split(" ")[2].split("\\(")[0]);
+                    String regex = "public\\s+[^\\s]+\\s+\\w+\\s*\\(";
+                    Pattern pattern = Pattern.compile(regex);
+                    Matcher matcher = pattern.matcher(code);
+                    if (matcher.find()) {
+                        String matchText = matcher.group();
+                        matchText = matchText.substring(0, matchText.length() - 1);
+                        question.setTitleSlug(matchText.trim().split(" ")[2]);
+                    }
                     StringBuffer sb = new StringBuffer();
                     sb.append(codeTypeEnum.getComment()).append(Constant.SUBMIT_REGION_BEGIN).append("\n");
-                    sb.append(code.replaceAll("\\n", "\n")).append("\n");
+                    String codeReplace = code.replaceAll("\\n", "\n");
+                    if (config.getCustomCode()) {
+                        sb.append(codeReplace.substring(0, codeReplace.length() - 1));
+                    } else {
+                        sb.append(codeReplace).append("\n");
+                    }
                     sb.append(codeTypeEnum.getComment()).append(Constant.SUBMIT_REGION_END).append("\n");
-                    question.setCode(sb.toString());
+                    String sbStr = sb.toString();
+                    if (config.getCustomCode() && config.getCustomFileName().contains("titleSlug") && StringUtils.isNotBlank(question.getTitleSlug())) {
+                        sbStr = sbStr.replace("Solution", VelocityTool.camelCaseName(question.getTitleSlug()));
+                    }
+                    question.setCode(sbStr);
                 } else {
                     question.setCode(codeTypeEnum.getComment() + "There is no code of " + codeTypeEnum.getType() + " type for this problem");
                 }
@@ -324,7 +349,7 @@ public class QuestionManager {
     private static String getContent(JSONObject jsonObject, JSONObject codingProblem, JSONObject samples) {
         StringBuffer sb = new StringBuffer();
         sb.append(codingProblem.getString("content"));
-        Config config = PersistentConfig.getInstance().getConfig();
+        Config config = NowCoderPersistentConfig.getInstance().getConfig();
         if (config.getShowTopics()) {
             JSONArray topicTagsArray = jsonObject.getJSONArray("questionTags");
             if (topicTagsArray != null && !topicTagsArray.isEmpty()) {

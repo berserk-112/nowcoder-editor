@@ -3,7 +3,7 @@ package com.berserk112.nowcodereditor.actions.tree;
 import com.berserk112.nowcodereditor.model.CodeTypeEnum;
 import com.berserk112.nowcodereditor.model.Config;
 import com.berserk112.nowcodereditor.model.Question;
-import com.berserk112.nowcodereditor.setting.PersistentConfig;
+import com.berserk112.nowcodereditor.setting.NowCoderPersistentConfig;
 import com.berserk112.nowcodereditor.utils.MessageUtils;
 import com.berserk112.nowcodereditor.utils.PropertiesUtils;
 import com.berserk112.nowcodereditor.utils.VelocityUtils;
@@ -30,7 +30,7 @@ public class ClearOneAction extends AbstractTreeAction {
             return;
         }
 
-        String filePath = PersistentConfig.getInstance().getTempFilePath() + VelocityUtils.convert(config.getCustomFileName(), question) + codeTypeEnum.getSuffix();
+        String filePath = NowCoderPersistentConfig.getInstance().getTempFilePath() + VelocityUtils.convert(config.getCustomFileName(), question) + codeTypeEnum.getSuffix();
 
         File file = new File(filePath);
         if (file.exists()) {

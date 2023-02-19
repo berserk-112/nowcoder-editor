@@ -6,12 +6,14 @@ import com.berserk112.nowcodereditor.model.Config;
 import com.berserk112.nowcodereditor.model.Constant;
 import com.berserk112.nowcodereditor.renderer.CustomTreeCellRenderer;
 import com.berserk112.nowcodereditor.timer.TimerBarWidget;
+import com.berserk112.nowcodereditor.utils.MessageUtils;
 import com.berserk112.nowcodereditor.utils.PropertiesUtils;
 import com.berserk112.nowcodereditor.utils.URLUtils;
 import com.berserk112.nowcodereditor.window.HttpLogin;
 import com.berserk112.nowcodereditor.window.NavigatorTable;
 import com.intellij.ide.BrowserUtil;
 import com.intellij.openapi.application.ApplicationManager;
+import com.intellij.openapi.components.ServiceManager;
 import com.intellij.openapi.editor.Editor;
 import com.intellij.openapi.editor.EditorFactory;
 import com.intellij.openapi.editor.EditorSettings;
@@ -20,7 +22,6 @@ import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory;
 import com.intellij.openapi.fileTypes.FileTypeManager;
 import com.intellij.openapi.ui.TextBrowseFolderListener;
 import com.intellij.openapi.ui.TextFieldWithBrowseButton;
-import com.intellij.ui.components.JBPasswordField;
 import com.intellij.ui.components.JBScrollPane;
 import com.intellij.ui.components.JBTextField;
 import com.intellij.util.net.HttpConfigurable;
@@ -41,6 +42,7 @@ public class SettingUI {
     private JComboBox webComboBox;
     private JComboBox codeComboBox;
     private JBTextField userNameField;
+    private JBTextField userId;
 //    private JBPasswordField passwordField;
 
     private JLabel soEasyLabel;
@@ -107,7 +109,7 @@ public class SettingUI {
         templateConfigHelp.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                BrowserUtil.browse("https://github.com/shuzijun/leetcode-editor/blob/master/doc/CustomCode.md");
+                BrowserUtil.browse("https://github.com/berserk-112/nowcoder-editor/doc/CustomCode.md");
             }
         });
 
@@ -166,9 +168,11 @@ public class SettingUI {
         codeComboBox.setSelectedIndex(0);
         fileFolderBtn.setText(System.getProperty("java.io.tmpdir"));
 
-        Config config = PersistentConfig.getInstance().getInitConfig();
+        Config config = NowCoderPersistentConfig.getInstance().getInitConfig();
         if (config != null) {
             userNameField.setText(config.getLoginName());
+            userId.setText(config.getUserId());
+
 //            passwordField.setText(PersistentConfig.getInstance().getPassword(config.getLoginName()));
             if (StringUtils.isNotBlank(config.getFilePath())) {
                 fileFolderBtn.setText(config.getFilePath());
@@ -221,39 +225,31 @@ public class SettingUI {
     }
 
     public boolean isModified() {
-        Config config = PersistentConfig.getInstance().getInitConfig();
+        Config config = NowCoderPersistentConfig.getInstance().getInitConfig();
         if (config == null) {
             return true;
         } else {
             Config currentState = new Config();
             process(currentState);
-            return true;
-/*
-            if (currentState.isModified(config)) {
-                if (passwordField.getText() != null && passwordField.getText().equals(PersistentConfig.getInstance().getPassword(config.getLoginName()))) {
-                    return false;
-                } else {
-                    return true;
-                }
-            } else {
+            if (!currentState.isModified(config)) {
                 return true;
             }
-*/
         }
+        return false;
     }
 
     public void apply() {
-        Config config = PersistentConfig.getInstance().getInitConfig();
+        Config config = NowCoderPersistentConfig.getInstance().getInitConfig();
         if (config == null) {
             config = new Config();
 //            config.setId(MTAUtils.getI(""));
         }
         process(config);
-        File file = new File(config.getFilePath() + File.separator + PersistentConfig.PATH + File.separator);
+        File file = new File(config.getFilePath() + File.separator + NowCoderPersistentConfig.PATH + File.separator);
         if (!file.exists()) {
             file.mkdirs();
         }
-        PersistentConfig.getInstance().setInitConfig(config);
+        NowCoderPersistentConfig.getInstance().setInitConfig(config);
 //        PersistentConfig.getInstance().savePassword(passwordField.getText(),config.getLoginName());
         CustomTreeCellRenderer.loaColor();
         TimerBarWidget.loaColor();
@@ -265,6 +261,7 @@ public class SettingUI {
             config.setVersion(Constant.PLUGIN_CONFIG_VERSION_1);
         }
         config.setLoginName(userNameField.getText());
+        config.setUserId(userId.getText());
         config.setFilePath(fileFolderBtn.getText());
         config.setCodeType(codeComboBox.getSelectedItem().toString());
         config.setUrl(webComboBox.getSelectedItem().toString());

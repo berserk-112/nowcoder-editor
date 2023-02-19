@@ -1,7 +1,7 @@
 package com.berserk112.nowcodereditor.window;
 
 import com.berserk112.nowcodereditor.model.PluginConstant;
-import com.berserk112.nowcodereditor.setting.PersistentConfig;
+import com.berserk112.nowcodereditor.setting.NowCoderPersistentConfig;
 import com.intellij.ide.DataManager;
 import com.intellij.openapi.actionSystem.DataContext;
 import com.intellij.openapi.application.ApplicationManager;
@@ -32,7 +32,7 @@ public class WindowFactory implements ToolWindowFactory {
         JComponent navigatorPanel=  new NavigatorPanel(toolWindow,project);
         Content content = contentFactory.createContent(navigatorPanel, "", false);
         toolWindow.getContentManager().addContent(content);
-        if(PersistentConfig.getInstance().getInitConfig()!=null && !PersistentConfig.getInstance().getInitConfig().getShowToolIcon()){
+        if(NowCoderPersistentConfig.getInstance().getInitConfig()!=null && !NowCoderPersistentConfig.getInstance().getInitConfig().getShowToolIcon()){
             toolWindow.setIcon(NowCoderEditorIcons.EMPEROR_NEW_CLOTHES);
         }
     }

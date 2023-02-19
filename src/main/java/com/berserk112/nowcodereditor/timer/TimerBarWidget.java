@@ -2,7 +2,7 @@ package com.berserk112.nowcodereditor.timer;
 
 import com.berserk112.nowcodereditor.model.Config;
 import com.berserk112.nowcodereditor.model.PluginConstant;
-import com.berserk112.nowcodereditor.setting.PersistentConfig;
+import com.berserk112.nowcodereditor.setting.NowCoderPersistentConfig;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.wm.CustomStatusBarWidget;
 import com.intellij.openapi.wm.StatusBar;
@@ -36,7 +36,7 @@ public class TimerBarWidget implements CustomStatusBarWidget {
         loaColor();
     }
     public static void loaColor(){
-        Config config = PersistentConfig.getInstance().getInitConfig();
+        Config config = NowCoderPersistentConfig.getInstance().getInitConfig();
         if (config != null) {
             Color[] colors = config.getFormatLevelColour();
             Level1 = colors[0];
@@ -90,7 +90,7 @@ public class TimerBarWidget implements CustomStatusBarWidget {
                 }
             }
         });
-        Config config = PersistentConfig.getInstance().getInitConfig();
+        Config config = NowCoderPersistentConfig.getInstance().getInitConfig();
         if (config != null) {
             if (StringUtils.isNotBlank(config.getLevelColour())) {
                 String[] colors = config.getLevelColour().split(";");

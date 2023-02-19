@@ -230,7 +230,7 @@ public class FileUtils {
             NowcoderEditor nowcoderEditor = ProjectConfig.getInstance(project).getDefEditor(URLUtils.getNowcoderHost()+question.getQuestionNo());
             nowcoderEditor.setQuestionNo(URLUtils.getNowcoderHost()+question.getQuestionNo());
             nowcoderEditor.setQuestionUUid(question.getQuestionUUid());
-            nowcoderEditor.setTitleSlug(question.getTitle());
+            nowcoderEditor.setTitleSlug(question.getTitleSlug());
             nowcoderEditor.setHost(URLUtils.getNowcoderHost());
             consumer.accept(nowcoderEditor,vf.getPath());
             ProjectConfig.getInstance(project).addNowcoderEditor(nowcoderEditor);
