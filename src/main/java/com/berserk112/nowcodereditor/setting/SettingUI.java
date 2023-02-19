@@ -109,7 +109,7 @@ public class SettingUI {
         templateConfigHelp.addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                BrowserUtil.browse("https://github.com/berserk-112/nowcoder-editor/doc/CustomCode.md");
+                BrowserUtil.browse("https://github.com/berserk-112/nowcoder-editor/blob/main/doc/CustomCode.md");
             }
         });
 
