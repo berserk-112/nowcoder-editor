@@ -6,7 +6,7 @@
 
 - 按相应的需求设置Code FileName, Code Template
 
-[![custom code.png](https://i.postimg.cc/CBgB21L9/custom code.png)](https://postimg.cc/CBgB21L9)
+![custom code.png](https://i.postimg.cc/CBgB21L9/custom code.png)
 
 ## 说明
 勾选自定代码后，会造成部分题目无法打开，这是因为牛客网中的题目并没有英文标题。question.titleSlug实际是使用的题目模板代码中的方法名，当多个题目名称相同时会出现题目无法打开的情况，暂时的解决方法是手动修改重名的文件。
