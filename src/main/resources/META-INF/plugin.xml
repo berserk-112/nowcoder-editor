@@ -6,7 +6,7 @@
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
     <name>Nowcoder Editor</name>
-    <version>0.1.6</version>
+    <version>0.1.7</version>
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
     <vendor email="xiaodong111245@gmail.com" url="https://www.github.com/berserk-112/nowcoder-editor">berserk-112</vendor>
 
@@ -17,7 +17,7 @@
     <div>
     <p>This plugin help users to run <a href="https://www.nowcoder.com/">Nowcoder</a> (which like Leetcode in China) in IDE<br>
         Note: It is based on <a href="https://github.com/shuzijun/leetcode-editor">LeetCode-Editor</a><br>
-        The detail about how to use, please check <a href="https://github.com/shuzijun/leetcode-editor#how-to-use">here</a><br>
+        The detail about how to use, please check <a href="https://github.com/berserk-112/nowcoder-editor#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E">here</a><br>
         It only support login by cookie.
     </p>
     </div>
@@ -25,13 +25,16 @@
             <p>本地IDE运行牛客网题目插件，
                 在shuzijun的<a href="https://github.com/shuzijun/leetcode-editor">leetcode插件</a>基础上修改得来,
                 再次感谢shuzijun开源的leetcode插件
-                具体使用说明也请参考shuzijun的leetcode插件<br>
+                具体使用说明：<a href="https://github.com/berserk-112/nowcoder-editor#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E">这里</a><br>
             本插件只支持通过cookie登录牛客网</p>
         </div>
 ]]></description>
 
     <change-notes><![CDATA[
         <ul>
+            <li>v0.1.7<br>
+                1.change plugin description
+            </li>
             <li>v0.1.6<br>
                 1.fix bugs<br>
                 2.can use custom code<br>
