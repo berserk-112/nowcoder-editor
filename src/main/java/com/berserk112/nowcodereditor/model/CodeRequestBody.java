@@ -1,6 +1,6 @@
 package com.berserk112.nowcodereditor.model;
 
-public class CodeRquestBody {
+public class CodeRequestBody {
     private String content;
     private String questionId;
     private String language;
@@ -10,7 +10,11 @@ public class CodeRquestBody {
     private String token;
     private int submitType;
 
-    public CodeRquestBody(String content, String questionId, String language, int tagId, int appId, int userId, String token, int submintType) {
+    private String selfInputData;
+
+    private String selfOutData;
+
+    public CodeRequestBody(String content, String questionId, String language, int tagId, int appId, int userId, String token, int submitType, String selfInputData, String selfOutData) {
         this.content = content;
         this.questionId = questionId;
         this.language = language;
@@ -18,7 +22,9 @@ public class CodeRquestBody {
         this.appId = appId;
         this.userId = userId;
         this.token = token;
-        this.submitType = submintType;
+        this.submitType = submitType;
+        this.selfInputData = selfInputData;
+        this.selfOutData = selfOutData;
     }
 
     public String getContent() {
@@ -51,5 +57,13 @@ public class CodeRquestBody {
 
     public int getSubmitType() {
         return submitType;
+    }
+
+    public String getSelfInputData() {
+        return selfInputData;
+    }
+
+    public String getSelfOutData() {
+        return selfOutData;
     }
 }

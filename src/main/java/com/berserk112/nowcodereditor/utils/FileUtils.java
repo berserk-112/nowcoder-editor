@@ -228,7 +228,7 @@ public class FileUtils {
         ApplicationManager.getApplication().invokeAndWait(() -> {
             VirtualFile vf = LocalFileSystem.getInstance().refreshAndFindFileByIoFile(file);
             NowcoderEditor nowcoderEditor = ProjectConfig.getInstance(project).getDefEditor(URLUtils.getNowcoderHost()+question.getQuestionNo());
-            nowcoderEditor.setQuestionNo(URLUtils.getNowcoderHost()+question.getQuestionNo());
+            nowcoderEditor.setQuestionNo(question.getQuestionNo());
             nowcoderEditor.setQuestionUUid(question.getQuestionUUid());
             nowcoderEditor.setTitleSlug(question.getTitleSlug());
             nowcoderEditor.setHost(URLUtils.getNowcoderHost());

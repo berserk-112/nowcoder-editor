@@ -8,5 +8,5 @@
 [![nowcoder-Setting.png](https://i.postimg.cc/TyWN9kpC/nowcoder-Setting.png)](https://postimg.cc/TyWN9kpC)   
 用户名可以随便填写，userId必须填写正确(可通过牛客网个人首页查看，网址最后一段数字即为userId)    
 ### 登录
-本插件只支持通过cookie的方式登录，查看牛客网cookie的方法可自行搜索    
+本插件只支持通过cookie的方式登录，查看cookie方式可[参考](https://github.com/shuzijun/leetcode-editor/blob/master/doc/LoginHelp_ZH.md#cookie%E7%99%BB%E5%BD%95)
 [![nowcoder-Login.png](https://i.postimg.cc/2jL5XFF8/nowcoder-Login.png)](https://postimg.cc/JtmmsX29)

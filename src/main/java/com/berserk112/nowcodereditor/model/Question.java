@@ -63,6 +63,8 @@ public class Question {
     @Deprecated
     private Integer submitted = 0;
 
+    private Boolean isACM = false;
+
     public Question() {
 
     }
@@ -87,6 +89,13 @@ public class Question {
         this.title = title;
     }
 
+    public Boolean getACM() {
+        return isACM;
+    }
+
+    public void setACM(Boolean ACM) {
+        isACM = ACM;
+    }
 
     public String getTitleSlug() {
         return titleSlug;

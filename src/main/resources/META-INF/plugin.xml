@@ -6,7 +6,7 @@
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
     <name>Nowcoder Editor</name>
-    <version>0.1.7</version>
+    <version>0.1.8</version>
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
     <vendor email="xiaodong111245@gmail.com" url="https://www.github.com/berserk-112/nowcoder-editor">berserk-112</vendor>
 
@@ -26,25 +26,20 @@
                 在shuzijun的<a href="https://github.com/shuzijun/leetcode-editor">leetcode插件</a>基础上修改得来,
                 再次感谢shuzijun开源的leetcode插件
                 具体使用说明：<a href="https://github.com/berserk-112/nowcoder-editor#%E4%BD%BF%E7%94%A8%E8%AF%B4%E6%98%8E">这里</a><br>
+                有任何使用上的问题欢迎到<a href="https://github.com/berserk-112/nowcoder-editor">这里</a>提issues<br>
             本插件只支持通过cookie登录牛客网</p>
         </div>
 ]]></description>
 
     <change-notes><![CDATA[
         <ul>
-            <li>v0.1.7<br>
-                1.change plugin description
-            </li>
-            <li>v0.1.6<br>
-                1.fix bugs<br>
-                2.can use custom code<br>
-                3.can open question on web<br>
-            </li>
-            <li>v0.1.5<br>
-                1.fix bugs<br>
-            </li>
-            <li>v0.1.4<br>
-                1.修复bug.<br>
+            <li>v0.1.8<br>
+                1.fixed some codes can't get<br>
+                2.fixed wrong info when running the code<br>
+                3.Optimize file naming<br>
+                1.修复有些题目代码无法获取的bug, 无核心代码模板时，默认使用acm模板<br>
+                2.修复运行代码的错误提示信息<br>
+                3.优化文件命名，现在命名方式是题目编号+模板方法名<br>
             </li>
         </ul>
         ]]>

@@ -12,6 +12,6 @@ import com.intellij.openapi.actionSystem.AnActionEvent;
 public class SubmitAction extends  AbstractTreeAction {
     @Override
     public void actionPerformed(AnActionEvent anActionEvent, Config config, NavigatorTable navigatorTable, Question question) {
-        CodeManager.SubmitCode(question, anActionEvent.getProject());
+        CodeManager.SubmitCode(question, anActionEvent.getProject(), 1);
     }
 }

@@ -10,6 +10,10 @@ public class CodeRquestBodyBuilder {
     private String token;
     private int submitType;
 
+    private String selfInputData;
+
+    private String selfOutputData;
+
     public CodeRquestBodyBuilder setContent(String content) {
         this.content = content;
         return this;
@@ -50,7 +54,17 @@ public class CodeRquestBodyBuilder {
         return this;
     }
 
-    public CodeRquestBody createCodeRquestBody() {
-        return new CodeRquestBody(content, questionId, language, tagId, appId, userId, token, submitType);
+    public CodeRquestBodyBuilder setSelfInputData(String selfInputData) {
+        this.selfInputData = selfInputData;
+        return this;
     }
+
+    public CodeRquestBodyBuilder setSelfOutData(String selfOutputData) {
+        this.selfOutputData = selfOutputData;
+        return this;
+    }
+    public CodeRequestBody createCodeRquestBody() {
+        return new CodeRequestBody(content, questionId, language, tagId, appId, userId, token, submitType, selfInputData, selfOutputData);
+    }
+
 }

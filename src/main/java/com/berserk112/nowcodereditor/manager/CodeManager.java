@@ -16,9 +16,6 @@ import org.jetbrains.annotations.NotNull;
 import java.io.File;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
-import java.net.CookieManager;
-import java.net.URLEncoder;
-import java.nio.charset.StandardCharsets;
 import java.util.function.BiConsumer;
 
 /**
@@ -51,7 +48,13 @@ public class CodeManager {
             FileUtils.openFileEditorAndSaveState(file, project, question, fillPath, true);
         } else {
             question.setContent(CommentUtils.createComment(question.getContent(), codeTypeEnum, config));
-            FileUtils.saveFile(file, VelocityUtils.convert(config.getCustomTemplate(), question));
+            if (question.getACM() || question.getTitleSlug().contains("Main")) {
+                String configSub = config.getCustomTemplate().
+                        substring(0, StringUtils.ordinalIndexOf(config.getCustomTemplate(), "\n", 3) + 1);
+                FileUtils.saveFile(file, VelocityUtils.convert(configSub, question));
+            } else {
+                FileUtils.saveFile(file, VelocityUtils.convert(config.getCustomTemplate(), question));
+            }
             FileUtils.openFileEditorAndSaveState(file, project, question, fillPath, true);
         }
     }
@@ -83,7 +86,7 @@ public class CodeManager {
     }
 
 
-    public static void SubmitCode(Question question, Project project) {
+    public static void SubmitCode(Question question, Project project, int submitType) {
         Config config = NowCoderPersistentConfig.getInstance().getInitConfig();
         String codeType = config.getCodeType();
         CodeTypeEnum codeTypeEnum = CodeTypeEnum.getCodeTypeEnum(codeType);
@@ -122,13 +125,13 @@ public class CodeManager {
 //            httpRequest.addHeader("Origin", "https://www.nowcoder.com");
 //            httpRequest.addHeader("Content-Type", "application/json");
             httpRequest.addHeader("Cookie", config.getCookie(config.getUrl() + config.getLoginName()));
-            httpRequest.setBody(getCodeRequestBody(question, config, code, token, codeTypeEnum));
+            httpRequest.setBody(getCodeRequestBody(question, config, code, token, codeTypeEnum, submitType));
 //            httpRequest.addParam();
             HttpResponse response = HttpRequestUtils.executePost(httpRequest);
             if (response != null && response.getStatusCode() == 200) {
                 String body = response.getBody();
                 JSONObject returnObj = JSONObject.parseObject(body);
-                ProgressManager.getInstance().run(new SubmitCheckTask(returnObj, codeTypeEnum, question, project, token));
+                ProgressManager.getInstance().run(new SubmitCheckTask(returnObj, codeTypeEnum, question, project, token, submitType));
                 MessageUtils.getInstance(project).showInfoMsg("info", PropertiesUtils.getInfo("request.pending"));
             } else if (response != null && response.getStatusCode() == 429) {
                 MessageUtils.getInstance(project).showInfoMsg("info", PropertiesUtils.getInfo("request.pending"));
@@ -144,15 +147,20 @@ public class CodeManager {
 
     }
 
-    public static String getCodeRequestBody(Question question, Config config, String code, String token, CodeTypeEnum codeTypeEnum) {
-        CodeRquestBody codeRquestBody = new CodeRquestBodyBuilder().setContent(code)
-                .setQuestionId(question.getQuestionId()).setLanguage(codeTypeEnum.getLangId().toString())
-                .setSubmitType(1).setAppId(9).setToken(token)
-                .setUserId(Integer.parseInt(config.getUserId())).createCodeRquestBody();
-        return JSONObject.toJSONString(codeRquestBody);
+    public static String getCodeRequestBody(Question question, Config config, String code, String token,
+                                            CodeTypeEnum codeTypeEnum, int submitType) {
+        CodeRquestBodyBuilder builder = new CodeRquestBodyBuilder();
+        builder.setContent(code).setQuestionId(question.getQuestionId())
+                .setLanguage(codeTypeEnum.getLangId().toString())
+                .setSubmitType(submitType).setAppId(5).setToken(token)
+                .setUserId(Integer.parseInt(config.getUserId()));
+        if (submitType == 2) {
+            builder.setSelfInputData(question.getInputSample()).setSelfOutData(question.getOutputSample());
+        }
+        return JSONObject.toJSONString(builder.createCodeRquestBody());
     }
-    public static void RunCodeCode(Question question, Project project) {
-        SubmitCode(question, project);
+    public static void RunCode(Question question, Project project) {
+        SubmitCode(question, project, 2);
 /*
         Config config = NowCoderPersistentConfig.getInstance().getInitConfig();
         String codeType = config.getCodeType();
@@ -227,7 +235,9 @@ public class CodeManager {
             }
 
             String code = FileUtils.getClearCommentFileBody(file, codeTypeEnum);
-            if (config.getCustomCode() && config.getCustomFileName().contains("titleSlug") && StringUtils.isNotBlank(question.getTitleSlug())) {
+            if (question.getACM()) {
+                code = code.replace(question.getTitleSlug(), "Main");
+            } else if (config.getCustomCode() && config.getCustomFileName().contains("titleSlug") && StringUtils.isNotBlank(question.getTitleSlug())) {
                 code = code.replace(VelocityTool.camelCaseName(question.getTitleSlug()), "Solution");
                 code = code += "}";
             }
@@ -284,13 +294,16 @@ public class CodeManager {
 
         private String token;
 
-        public SubmitCheckTask(JSONObject returnObj, CodeTypeEnum codeTypeEnum, Question question, Project project, String token) {
+        private int submitType;
+
+        public SubmitCheckTask(JSONObject returnObj, CodeTypeEnum codeTypeEnum, Question question, Project project, String token, int submitType) {
             super(project, PluginConstant.PLUGIN_NAME + ".submitCheckTask", true);
             this.returnObj = returnObj;
             this.codeTypeEnum = codeTypeEnum;
             this.question = question;
             this.project = project;
             this.token = token;
+            this.submitType = submitType;
         }
 
         @Override
@@ -309,7 +322,7 @@ public class CodeManager {
                     requestStatus.addUrlParam("appId", "9");
                     requestStatus.addUrlParam("userId", config.getUserId());
                     requestStatus.addUrlParam("token", token);
-                    requestStatus.addUrlParam("submitType", "1");
+                    requestStatus.addUrlParam("submitType", Integer.toString(submitType));
                     requestStatus.finshAddUrlParams();
 //                    requestStatus.addHeader("Accept", "*/*");
                     requestStatus.addHeader("Accept", "text/plain, */*; q=0.01");
@@ -320,7 +333,14 @@ public class CodeManager {
                         String body = response.getBody();
                         JSONObject jsonObject = JSONObject.parseObject(body).getJSONObject("data");
                         if (!"等待判题".equals(jsonObject.getString("judgeReplyDesc"))) {
-                            if (Integer.valueOf(5).equals(jsonObject.getInteger("status"))) { //通过
+                            if ("编译错误".equals(jsonObject.getString("judgeReplyDesc"))) {
+                                String memo = jsonObject.getString("memo");
+                                MessageUtils.getInstance(project).showInfoMsg("error", PropertiesUtils.getInfo("submit.compile.error", memo));
+                            }else if(jsonObject.getBoolean("isSelfTest")) {
+                                String input = jsonObject.getString("userInput");
+                                String output = jsonObject.getString("userOutput");
+                                MessageUtils.getInstance(project).showInfoMsg("info", PropertiesUtils.getInfo("run.result", input, output));
+                            }else if (Integer.valueOf(5).equals(jsonObject.getInteger("status"))) { //通过
                                 String runtime = jsonObject.getString("timeConsumption") + "ms";
                                 String runtimePercentile = jsonObject.getJSONObject("timeMemoryComparison").getBigDecimal("timePercent")
                                         .multiply(BigDecimal.valueOf(100)).setScale(2, RoundingMode.HALF_UP).toString() + "%";
@@ -333,11 +353,7 @@ public class CodeManager {
                                         memory, memoryPercentile, codeTypeEnum.getType()));
                                 question.setStatus("ac");
                                 project.getMessageBus().syncPublisher(QuestionStatusListener.QUESTION_STATUS_TOPIC).updateTable(question);
-                            } else if ("编译错误".equals(jsonObject.getString("judgeReplyDesc"))) {
-                                String memo = jsonObject.getString("memo");
-                                MessageUtils.getInstance(project).showInfoMsg("error", PropertiesUtils.getInfo("submit.compile.error", memo));
-                            } else {
-
+                            }else {
                                 String input = jsonObject.getString("userInput");
                                 String output = jsonObject.getString("userOutput");
                                 String expectedOutput = jsonObject.getString("expectedOutput");

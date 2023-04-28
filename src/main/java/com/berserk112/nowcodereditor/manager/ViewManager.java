@@ -77,7 +77,7 @@ public class ViewManager {
         }
     }
 
-    public static Question getQuestionByUUid(String UUid, CodeTypeEnum codeTypeEnum, Project project) {
+    public static Question getQuestionByUUid(String UUid, String questionNo, CodeTypeEnum codeTypeEnum, Project project) {
         if (StringUtils.isBlank(UUid)) {
             return null;
         }
@@ -85,6 +85,7 @@ public class ViewManager {
         if (!questions.containsKey(key)) {
             Question question = new Question();
             question.setQuestionUUid(UUid);
+            question.setQuestionNo(questionNo);
             if (QuestionManager.fillQuestion(question, codeTypeEnum, project)) {
                 questions.put(key, question);
             } else {

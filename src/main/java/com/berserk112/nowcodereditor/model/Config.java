@@ -131,6 +131,16 @@ public class Config {
         this.name = name;
     }
 
+    public int getRenameSeed() {
+        return renameSeed;
+    }
+
+    public void setRenameSeed(int renameSeed) {
+        this.renameSeed = renameSeed;
+    }
+
+    public int renameSeed = 1;
+
     public String getLoginName() {
         return loginName;
     }

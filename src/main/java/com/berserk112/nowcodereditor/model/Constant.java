@@ -57,8 +57,14 @@ public class Constant {
     /**
      * 默认模板
      */
-    public static final String CUSTOM_FILE_NAME = "$!velocityTool.camelCaseName(${question.title})";
-    public static final String CUSTOM_TEMPLATE = "${question.content}\n\n${question.code}";
+    public static final String CUSTOM_FILE_NAME = "$!velocityTool.camelCaseName(${question.titleSlug})";
+    public static final String CUSTOM_TEMPLATE = "${question.content}\n" +
+            "package editor.cn;  //根据实际修改\n" +
+            "${question.code}\n" +
+            "    public static void main(String[] args) {\n" +
+            "        $!velocityTool.camelCaseName(${question.titleSlug}) solution = new $!velocityTool.camelCaseName(${question.titleSlug})();\n" +
+            "    }\n" +
+            "}";
 
     /**
      * 提交代码标识 submit

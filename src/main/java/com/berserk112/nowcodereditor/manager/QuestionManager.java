@@ -281,12 +281,14 @@ public class QuestionManager {
     }
 
     private static boolean getQuestion(Question question, CodeTypeEnum codeTypeEnum, Project project) {
+        String msg = "";
         try {
             HttpRequest httpRequest = HttpRequest.get(URLUtils.getNowcoderQuestionInfo() + question.getQuestionUUid());
             HttpResponse response = HttpRequestUtils.executeGet(httpRequest);
             if (response != null && response.getStatusCode() == 200) {
 
                 String body = response.getBody();
+                msg = JSONObject.parseObject(response.getBody()).get("msg").toString();
 
                 JSONObject jObject = JSONObject.parseObject(body).getJSONObject("data");
                 JSONObject jsonObject = jObject.getJSONObject("codingProblem");
@@ -306,17 +308,35 @@ public class QuestionManager {
                 Config config = NowCoderPersistentConfig.getInstance().getConfig();
                 Document doc = Jsoup.connect(URLUtils.getNowcoderPractice() + question.getQuestionUUid()).get();
                 String code = doc.getElementById(codeTypeEnum.getLangSlug() + "Tpl") == null ? "" : doc.getElementById(codeTypeEnum.getLangSlug() + "Tpl").text();
+                String javaCode = doc.getElementById("javaTpl") == null ? "" : doc.getElementById("javaTpl").text();
 //                code = code.substring(code.indexOf("public") + 7);
-                if (!StringUtils.isBlank(code)) {
-//                    question.setTitleSlug(code.substring(code.indexOf("public")).split(" ")[2].split("\\(")[0]);
+                if (!StringUtils.isBlank(javaCode)) {
                     String regex = "public\\s+[^\\s]+\\s+\\w+\\s*\\(";
                     Pattern pattern = Pattern.compile(regex);
-                    Matcher matcher = pattern.matcher(code);
+                    Matcher matcher = pattern.matcher(javaCode);
                     if (matcher.find()) {
                         String matchText = matcher.group();
                         matchText = matchText.substring(0, matchText.length() - 1);
-                        question.setTitleSlug(matchText.trim().split(" ")[2]);
+                        question.setTitleSlug(question.getQuestionNo() + matchText.trim().split(" ")[2]);
                     }
+                }
+                if ((StringUtils.isNotBlank(code) && code.contains("Main")) || StringUtils.isBlank(code)) {
+                    if (StringUtils.isNotBlank(codeTypeEnum.getLangSlug())) {
+                        question.setACM(Boolean.TRUE);
+                        StringBuffer sb = new StringBuffer();
+                        sb.append(codeTypeEnum.getComment()).append(Constant.SUBMIT_REGION_BEGIN).append("\n");
+                        sb.append(PropertiesUtils.getInfo("acm."+codeTypeEnum.getLangSlug() + "Template"));
+                        sb.append(codeTypeEnum.getComment()).append(Constant.SUBMIT_REGION_END).append("\n");
+                        String sbStr = sb.toString();
+                        question.setTitleSlug(question.getQuestionNo() + "Main");
+                        if (config.getCustomCode() && config.getCustomFileName().contains("titleSlug")) {
+                            sbStr = sbStr.replace("Main", question.getTitleSlug());
+                        }
+                        question.setCode(sbStr);
+                    } else {
+                        question.setCode(codeTypeEnum.getComment() + "There is no code of " + codeTypeEnum.getType() + " type for this problem");
+                    }
+                } else if (StringUtils.isNotBlank(code)) {
                     StringBuffer sb = new StringBuffer();
                     sb.append(codeTypeEnum.getComment()).append(Constant.SUBMIT_REGION_BEGIN).append("\n");
                     String codeReplace = code.replaceAll("\\n", "\n");
@@ -331,9 +351,8 @@ public class QuestionManager {
                         sbStr = sbStr.replace("Solution", VelocityTool.camelCaseName(question.getTitleSlug()));
                     }
                     question.setCode(sbStr);
-                } else {
-                    question.setCode(codeTypeEnum.getComment() + "There is no code of " + codeTypeEnum.getType() + " type for this problem");
                 }
+
                 return Boolean.TRUE;
             } else {
                 MessageUtils.getInstance(project).showWarnMsg("error", PropertiesUtils.getInfo("response.code"));
@@ -341,7 +360,7 @@ public class QuestionManager {
 
         } catch (Exception e) {
             LogUtils.LOG.error("获取代码失败", e);
-            MessageUtils.getInstance(project).showWarnMsg("error", PropertiesUtils.getInfo("response.code"));
+            MessageUtils.getInstance(project).showWarnMsg("error", PropertiesUtils.getInfo("response.code") + msg);
         }
         return Boolean.FALSE;
     }

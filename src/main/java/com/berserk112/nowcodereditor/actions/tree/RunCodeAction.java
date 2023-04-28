@@ -12,6 +12,6 @@ import com.intellij.openapi.actionSystem.AnActionEvent;
 public class RunCodeAction extends  AbstractTreeAction {
     @Override
     public void actionPerformed(AnActionEvent anActionEvent, Config config, NavigatorTable navigatorTable, Question question) {
-        CodeManager.RunCodeCode(question, anActionEvent.getProject());
+        CodeManager.RunCode(question, anActionEvent.getProject());
     }
 }

@@ -43,7 +43,7 @@ public class TestcaseAction extends AbstractTreeAction {
                 return;
             } else {
                 question.setInputSample(text.get());
-                CodeManager.RunCodeCode(question, anActionEvent.getProject());
+                CodeManager.RunCode(question, anActionEvent.getProject());
             }
         }
 

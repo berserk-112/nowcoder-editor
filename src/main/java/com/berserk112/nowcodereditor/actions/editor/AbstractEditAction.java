@@ -39,7 +39,7 @@ abstract class AbstractEditAction extends AbstractAction {
             MessageUtils.getInstance(anActionEvent.getProject()).showInfoMsg("info", PropertiesUtils.getInfo("tree.host"));
             return;
         }
-        Question question = ViewManager.getQuestionByUUid(nowcoderEditor.getQuestionUUid(),
+        Question question = ViewManager.getQuestionByUUid(nowcoderEditor.getQuestionUUid(), nowcoderEditor.getQuestionNo(),
                 CodeTypeEnum.getCodeTypeEnum(config.getCodeType()), anActionEvent.getProject());
         if (question == null) {
             MessageUtils.getInstance(anActionEvent.getProject()).showInfoMsg("info", PropertiesUtils.getInfo("tree.null"));
