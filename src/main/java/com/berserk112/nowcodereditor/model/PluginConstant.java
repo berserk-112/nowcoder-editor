@@ -57,6 +57,6 @@ public class PluginConstant {
 
     public static final String  NOWCODER_EDITOR_TIMER_STATUS_BAR_ID = PLUGIN_ID + "-TimerStatusBar";
 
-    public static final String  NOWCODER_EDITOR_VIEW = "lcv";
+    public static final String  NOWCODER_EDITOR_VIEW = "lcvNow";
 
 }
