@@ -8,7 +8,7 @@ import com.berserk112.nowcodereditor.utils.*;
 import com.berserk112.nowcodereditor.window.*;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.application.ApplicationManager;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.net.HttpCookie;
 import java.util.List;

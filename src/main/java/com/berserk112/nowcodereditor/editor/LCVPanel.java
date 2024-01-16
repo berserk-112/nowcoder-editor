@@ -16,12 +16,13 @@ import com.intellij.openapi.fileTypes.ex.FileTypeChooser;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.LocalFileSystem;
 import com.intellij.openapi.vfs.VirtualFile;
+import com.intellij.ui.JBColor;
 import com.intellij.ui.jcef.JCEFHtmlPanel;
 import com.intellij.util.io.HttpRequests;
 import com.intellij.util.io.URLUtil;
 import com.intellij.util.ui.UIUtil;
 import io.netty.handler.codec.http.HttpHeaderNames;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.cef.browser.CefBrowser;
 import org.cef.browser.CefFrame;
 import org.cef.handler.*;
@@ -153,6 +154,6 @@ public class LCVPanel extends JCEFHtmlPanel {
 
     public void updateStyle(String style) {
         getCefBrowser().executeJavaScript(
-                "updateStyle('" + style + "'," + UIUtil.isUnderDarcula() + ");", getCefBrowser().getURL(), 0);
+                "updateStyle('" + style + "'," + !JBColor.isBright() + ");", getCefBrowser().getURL(), 0);
     }
 }

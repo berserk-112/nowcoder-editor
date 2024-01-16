@@ -11,7 +11,7 @@ import com.berserk112.nowcodereditor.window.NavigatorTable;
 import com.berserk112.nowcodereditor.window.TestcasePanel;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.application.ApplicationManager;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.concurrent.atomic.AtomicReference;
 

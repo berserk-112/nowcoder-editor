@@ -9,7 +9,7 @@ import com.intellij.openapi.progress.ProgressIndicator;
 import com.intellij.openapi.progress.ProgressManager;
 import com.intellij.openapi.progress.Task;
 import com.intellij.openapi.project.Project;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 import org.apache.http.client.utils.URIBuilder;
 import org.jetbrains.annotations.NotNull;
 
@@ -47,15 +47,20 @@ public class CodeManager {
         if (file.exists()) {
             FileUtils.openFileEditorAndSaveState(file, project, question, fillPath, true);
         } else {
-            question.setContent(CommentUtils.createComment(question.getContent(), codeTypeEnum, config));
-            if (question.getACM() || question.getTitleSlug().contains("Main")) {
-                String configSub = config.getCustomTemplate().
-                        substring(0, StringUtils.ordinalIndexOf(config.getCustomTemplate(), "\n", 3) + 1);
-                FileUtils.saveFile(file, VelocityUtils.convert(configSub, question));
-            } else {
-                FileUtils.saveFile(file, VelocityUtils.convert(config.getCustomTemplate(), question));
+            String content = question.getContent();
+            try {
+                question.setContent(CommentUtils.createComment(content, codeTypeEnum, config));
+                if (question.getACM() || question.getTitleSlug().contains("Main")) {
+                    String configSub = config.getCustomTemplate().
+                            substring(0, StringUtils.ordinalIndexOf(config.getCustomTemplate(), "\n", 3) + 1);
+                    FileUtils.saveFile(file, VelocityUtils.convert(configSub, question));
+                } else {
+                    FileUtils.saveFile(file, VelocityUtils.convert(config.getCustomTemplate(), question));
+                }
+                FileUtils.openFileEditorAndSaveState(file, project, question, fillPath, true);
+            } finally {
+                question.setContent(content);
             }
-            FileUtils.openFileEditorAndSaveState(file, project, question, fillPath, true);
         }
     }
 

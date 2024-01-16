@@ -84,10 +84,13 @@ public class IOUtils {
     }
 
     /** @deprecated */
+/*
     public static byte[] toByteArray(String input) throws IOException {
         return input.getBytes();
     }
+*/
 
+    @Deprecated
     public static char[] toCharArray(InputStream is) throws IOException {
         CharArrayWriter output = new CharArrayWriter();
         copy((InputStream)is, (Writer)output);
@@ -124,12 +127,12 @@ public class IOUtils {
         return sw.toString();
     }
 
-    /** @deprecated */
+    @Deprecated
     public static String toString(byte[] input) throws IOException {
         return new String(input);
     }
 
-    /** @deprecated */
+    @Deprecated
     public static String toString(byte[] input, String encoding) throws IOException {
         return encoding == null?new String(input):new String(input, encoding);
     }

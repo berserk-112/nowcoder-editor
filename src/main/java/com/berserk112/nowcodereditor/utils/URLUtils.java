@@ -1,7 +1,7 @@
 package com.berserk112.nowcodereditor.utils;
 
 import com.berserk112.nowcodereditor.setting.NowCoderPersistentConfig;
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 /**
  * @author shuzijun

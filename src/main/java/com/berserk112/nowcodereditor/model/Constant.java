@@ -59,7 +59,7 @@ public class Constant {
      */
     public static final String CUSTOM_FILE_NAME = "$!velocityTool.camelCaseName(${question.titleSlug})";
     public static final String CUSTOM_TEMPLATE = "${question.content}\n" +
-            "package editor.cn;  //根据实际修改\n" +
+            "package nowcoder.editor.cn;  //根据实际修改\n" +
             "${question.code}\n" +
             "    public static void main(String[] args) {\n" +
             "        $!velocityTool.camelCaseName(${question.titleSlug}) solution = new $!velocityTool.camelCaseName(${question.titleSlug})();\n" +

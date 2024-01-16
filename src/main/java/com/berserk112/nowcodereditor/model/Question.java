@@ -1,6 +1,6 @@
 package com.berserk112.nowcodereditor.model;
 
-import org.apache.commons.lang.StringUtils;
+import org.apache.commons.lang3.StringUtils;
 
 import java.util.Map;
 

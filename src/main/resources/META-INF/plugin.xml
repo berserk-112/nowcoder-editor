@@ -6,7 +6,7 @@
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
     <name>Nowcoder Editor</name>
-    <version>0.1.9</version>
+    <version>0.1.10</version>
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
     <vendor email="xiaodong111245@gmail.com" url="https://www.github.com/berserk-112/nowcoder-editor">berserk-112</vendor>
 
@@ -33,16 +33,16 @@
 
     <change-notes><![CDATA[
         <ul>
-            <li>v0.1.9<br>
-                1.fixed unable to use the nowcoder editor simultaneously with leetcode editor<br>
-                1.修复不能同时和leetcode插件运行的问题<br>
+            <li>v0.1.10<br>
+                1.fixed unable open question on latest idea version<br>
+                1.修复不能在新版本idea上打开题目的bug<br>
             </li>
         </ul>
         ]]>
     </change-notes>
 
 
-    <idea-version since-build="202.0"/>
+    <idea-version since-build="232.0"/>
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
@@ -61,7 +61,7 @@
                             serviceImplementation="com.berserk112.nowcodereditor.setting.NowCoderPersistentConfig"/>
         <projectService serviceInterface="com.berserk112.nowcodereditor.setting.ProjectConfig"
                         serviceImplementation="com.berserk112.nowcodereditor.setting.ProjectConfig"/>
-        <applicationConfigurable groupId="tools" displayName="nowcoder Plugin" id="nowcoder.id"
+        <applicationConfigurable groupId="tools" displayName="Nowcoder Plugin" id="nowcoder.id"
                                  instance="com.berserk112.nowcodereditor.setting.SettingConfigurable"/>
         <statusBarWidgetFactory implementation="com.berserk112.nowcodereditor.timer.TimerStatusBarWidgetProvider"/>
         <lang.foldingBuilder language="JAVA" implementationClass="com.berserk112.nowcodereditor.language.ScopeFoldingBuilder"/>
