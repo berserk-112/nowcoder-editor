@@ -63,7 +63,7 @@
                         serviceImplementation="com.berserk112.nowcodereditor.setting.ProjectConfig"/>
         <applicationConfigurable groupId="tools" displayName="Nowcoder Plugin" id="nowcoder.id"
                                  instance="com.berserk112.nowcodereditor.setting.SettingConfigurable"/>
-        <statusBarWidgetFactory implementation="com.berserk112.nowcodereditor.timer.TimerStatusBarWidgetProvider"/>
+        <statusBarWidgetFactory id="nowcoder-editor-TimerStatusBar" implementation="com.berserk112.nowcodereditor.timer.TimerStatusBarWidgetProvider"/>
         <lang.foldingBuilder language="JAVA" implementationClass="com.berserk112.nowcodereditor.language.ScopeFoldingBuilder"/>
         <lang.foldingBuilder language="Python" implementationClass="com.berserk112.nowcodereditor.language.ScopeFoldingBuilder"/>
         <lang.foldingBuilder language="ObjectiveC" implementationClass="com.berserk112.nowcodereditor.language.ScopeFoldingBuilder"/>
